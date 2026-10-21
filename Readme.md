@@ -1,1 +1,5 @@
-QuickBite Readme
+**QuickBite** is a web-based food ordering and delivery management system designed to connect customers, restaurants, and delivery riders through a centralized platform. The system supports four user roles: Customer, Restaurant Manager, Delivery Rider, and Administrator, each with dedicated features and dashboards.
+
+Customers can explore restaurants, browse menus, add food items to their cart, place orders, and track order statuses. Restaurant managers can manage their menus, process incoming orders, and update food preparation statuses. Delivery riders can manage assigned deliveries, update pickup and delivery statuses, and view their delivery history. Administrators oversee the platform by managing users, restaurants, delivery riders, and overall system operations.
+
+The platform aims to simplify the food ordering and delivery process through efficient order management, role-based access control, and a user-friendly interface. It will be developed using HTML, CSS, JavaScript, PHP, and MySQL.
