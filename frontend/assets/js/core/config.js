@@ -1,0 +1,3 @@
+export const APP_CONFIG = {
+  API_BASE_URL: "/QuickBite-Food-Delivery/backend/public/api",
+};
