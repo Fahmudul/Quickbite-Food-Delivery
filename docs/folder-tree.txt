@@ -1,0 +1,22 @@
+quickbite/
+├── frontend/
+│   ├── index.html
+│   ├── pages/{auth,customer,restaurant,rider,admin}/
+│   └── assets/
+│       ├── css/{components,pages}/
+│       ├── js/{core,features,pages}/
+│       └── images/
+├── backend/
+│   ├── public/{index.php,.htaccess}
+│   ├── config/local.example.php
+│   ├── routes/api.php
+│   └── src/
+│       ├── Core/
+│       ├── Middleware/
+│       └── Modules/{Health,Auth,Accounts,Restaurants,Zones,Menu,Inventory,Cart,Checkout,Orders,Delivery,Payments,Notifications}/
+├── database/{schema.sql,seeds.sql}
+├── docs/{architecture.md,development-conventions.md,local-setup.md}
+├── storage/{logs,uploads}/
+├── tests/
+├── .gitignore
+└── README.md
