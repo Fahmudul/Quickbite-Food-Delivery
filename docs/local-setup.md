@@ -43,7 +43,7 @@ Update credentials if needed. `local.php` is ignored by Git.
 Open:
 
 ```text
-http://localhost/quickbite/backend/public/api/health
+http://localhost/QuickBite-Food-Delivery/backend/public/api/health
 ```
 
 Expected JSON:
@@ -62,7 +62,7 @@ Expected JSON:
 Open:
 
 ```text
-http://localhost/quickbite/frontend/
+http://localhost/QuickBite-Food-Delivery/frontend/
 ```
 
 Do not use `file://`.
