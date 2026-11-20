@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Zone Management | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/ADMIN-06-delivery-zones.css">
+    <script src="../../assets/js/pages/ADMIN-06-delivery-zones.js" defer></script>
+</head>
+<body class="dz-page" data-user-role="admin">
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="#">QuickBite</a>
+            <p class="sidebar-role">Administrator</p>
+
+            <nav class="sidebar-nav" aria-label="Administrator navigation">
+                <a class="sidebar-link" href="#">Dashboard</a>
+                <a class="sidebar-link" href="#">Restaurant Applications</a>
+                <a class="sidebar-link" href="#">Rider Applications</a>
+                <a class="sidebar-link active" href="D:\QuickBite\QuickBite_ADMIN-06_Delivery_Zone_Management_Final\frontend\pages\admin\ADMIN-06-delivery-zones.html" aria-current="page">Delivery Zones</a>
+                <a class="sidebar-link" href="#">Delivery Fee</a>
+                <a class="sidebar-link" href="#">Orders &amp; Riders</a>
+                <a class="sidebar-link" href="#">Delivery Problems</a>
+                <a class="sidebar-link" href="#">Refunds</a>
+                <a class="sidebar-link" href="#">Account Profile</a>
+            </nav>
+
+            <a class="sidebar-logout" href="#">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header dz-page-header">
+                <div>
+                    <h1>Delivery Zone Management</h1>
+                    <p class="page-subtitle">Manage the delivery areas available to customers and restaurants.</p>
+                </div>
+                <button class="dz-button dz-button-primary" type="button" id="addZoneButton">
+                    Add New Zone
+                </button>
+            </header>
+
+            <div class="dz-role-notice" id="roleNotice" role="alert" hidden>
+                Only administrators can manage delivery zones.
+            </div>
+
+            <section class="dz-card" aria-labelledby="zonesHeading">
+                <div class="dz-section-heading">
+                    <div>
+                        <h2 id="zonesHeading">Supported Zones</h2>
+                        <p>View the delivery zones and manage their availability.</p>
+                    </div>
+                    <span class="dz-count" id="zoneCount">0 zones</span>
+                </div>
+
+                <div class="dz-table-wrapper">
+                    <table class="dz-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Zone Name</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Availability</th>
+                                <th scope="col" class="dz-action-heading">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="zoneTableBody"></tbody>
+                    </table>
+                </div>
+
+                <p class="dz-note">
+                    An inactive zone cannot be selected for a new address or restaurant coverage.
+                    Existing orders keep their saved delivery zone.
+                </p>
+            </section>
+
+            <section class="dz-card dz-form-card" id="zoneFormSection" aria-labelledby="formHeading">
+                <div class="dz-section-heading">
+                    <div>
+                        <h2 id="formHeading">Add a Delivery Zone</h2>
+                        <p id="formDescription">Enter the name of the delivery area.</p>
+                    </div>
+                </div>
+
+                <form id="zoneForm" novalidate>
+                    <div class="dz-form-row">
+                        <div class="dz-field">
+                            <label for="zoneName">Zone Name</label>
+                            <input
+                                type="text"
+                                id="zoneName"
+                                name="zoneName"
+                                maxlength="40"
+                                placeholder="Enter delivery zone name"
+                                autocomplete="off"
+                                aria-describedby="zoneNameError"
+                                required
+                            >
+                            <small class="dz-error" id="zoneNameError" role="alert"></small>
+                        </div>
+
+                        <div class="dz-form-buttons">
+                            <button class="dz-button dz-button-primary" type="submit" id="saveZoneButton">
+                                Save Zone
+                            </button>
+                            <button class="dz-button dz-button-secondary" type="button" id="cancelEditButton" hidden>
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+                    <p class="dz-form-message" id="formMessage" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
