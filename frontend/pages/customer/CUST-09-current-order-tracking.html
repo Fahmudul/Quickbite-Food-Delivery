@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Current Order Tracking | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/CUST-09-current-order-tracking.css">
+    <script src="../../assets/js/pages/CUST-09-current-order-tracking.js" defer></script>
+</head>
+<body>
+    <div class="customer-layout">
+        <header class="customer-header">
+            <div class="customer-header-inner">
+                <a class="customer-brand" href="#">QuickBite</a>
+                <nav class="customer-nav" aria-label="Customer navigation">
+                    <a href="#">Restaurants</a>
+                    <a href="#">Cart</a>
+                    <a class="active" href="#">Orders</a>
+                    <a href="#">Addresses</a>
+                    <a href="#">Profile</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="customer-main">
+            <div class="customer-content">
+                <div class="tracking-grid">
+                    <section class="card tracking-card" aria-labelledby="trackingTitle">
+                        <div class="tracking-heading">
+                            <div>
+                                <h1 id="trackingTitle">Order #QB-1048</h1>
+                                <span class="order-status status-accepted" id="orderStatus">Accepted</span>
+                            </div>
+                        </div>
+
+                        <p class="tracking-intro" id="trackingIntro">
+                            Your order is accepted by the restaurant. You can cancel while it is still in this stage.
+                        </p>
+
+                        <ol class="order-timeline" id="orderTimeline">
+                            <li class="timeline-step completed current">
+                                <span class="timeline-dot"></span>
+                                <div>
+                                    <strong>Accepted</strong>
+                                    <small>Your order is accepted</small>
+                                </div>
+                            </li>
+                            <li class="timeline-step">
+                                <span class="timeline-dot"></span>
+                                <div>
+                                    <strong>Preparing</strong>
+                                    <small>Restaurant is preparing your order</small>
+                                </div>
+                            </li>
+                            <li class="timeline-step">
+                                <span class="timeline-dot"></span>
+                                <div>
+                                    <strong>Ready for Pickup</strong>
+                                    <small>Your order is ready for the rider</small>
+                                </div>
+                            </li>
+                            <li class="timeline-step">
+                                <span class="timeline-dot"></span>
+                                <div>
+                                    <strong>Picked Up</strong>
+                                    <small>Rider has collected your order</small>
+                                </div>
+                            </li>
+                            <li class="timeline-step">
+                                <span class="timeline-dot"></span>
+                                <div>
+                                    <strong>Delivered</strong>
+                                    <small>Your order has been delivered</small>
+                                </div>
+                            </li>
+                        </ol>
+
+                        <div class="tracking-actions">
+                            <button class="btn btn-secondary" type="button" id="cancelOrderButton">
+                                Cancel Order
+                            </button>
+                            <p class="tracking-message" id="trackingMessage" role="status" aria-live="polite"></p>
+                        </div>
+                        <p class="tracking-note">Cancellation is available only while the order is Accepted.</p>
+                    </section>
+
+                    <aside class="card order-details-card" aria-labelledby="detailsTitle">
+                        <h2 id="detailsTitle">Order details</h2>
+                        <div class="detail-row">
+                            <span>Restaurant</span>
+                            <strong>Urban Bites</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Items</span>
+                            <strong>2 items</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Payment</span>
+                            <strong id="paymentMethod">Cash on Delivery</strong>
+                        </div>
+                        <div class="detail-row">
+                            <span>Total</span>
+                            <strong>৳540</strong>
+                        </div>
+                        <div class="detail-row detail-address">
+                            <span>Delivery address</span>
+                            <strong>House 12, Road 5, Dhanmondi, Dhaka</strong>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
