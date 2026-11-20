@@ -1,0 +1,94 @@
+.fee-card {
+    width: 100%;
+    max-width: 760px;
+    padding: 24px;
+}
+
+.fee-card h2 {
+    margin-bottom: 5px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.fee-amount {
+    margin: 0 0 16px;
+    color: var(--primary);
+    font-size: 29px;
+    font-weight: bold;
+}
+
+.fee-card .form-label {
+    margin-bottom: 7px;
+    font-size: 13px;
+}
+
+.fee-card .form-input {
+    width: 100%;
+    max-width: 530px;
+    height: 42px;
+}
+
+.fee-error {
+    display: block;
+    min-height: 17px;
+    margin-top: 5px;
+    color: var(--danger);
+    font-size: 12px;
+}
+
+.fee-card .form-input.fee-invalid {
+    border-color: var(--danger);
+    outline-color: var(--danger);
+}
+
+.fee-update-button {
+    margin-top: 4px;
+}
+
+.fee-message {
+    min-height: 18px;
+    margin: 9px 0 0;
+    color: var(--success);
+    font-size: 12px;
+}
+
+.fee-note {
+    margin: 8px 0 0;
+    color: var(--muted);
+    font-size: 12px;
+    line-height: 1.6;
+}
+
+.fee-access-message {
+    max-width: 760px;
+    padding: 12px;
+    border: 1px solid #fecaca;
+    border-radius: 6px;
+    color: var(--danger);
+    background: #fef2f2;
+    font-size: 13px;
+}
+
+.fee-card .btn:disabled,
+.fee-card .form-input:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 760px) {
+    .fee-card {
+        padding: 18px;
+    }
+
+    .fee-card .form-input {
+        max-width: 100%;
+    }
+
+    .fee-amount {
+        font-size: 26px;
+    }
+}

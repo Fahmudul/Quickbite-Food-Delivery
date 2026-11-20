@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders &amp; Rider Assignment | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/ADMIN-08-orders-rider-assignment.css">
+    <script src="../../assets/js/pages/ADMIN-08-orders-rider-assignment.js" defer></script>
+</head>
+<body data-user-role="admin">
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="#">QuickBite</a>
+            <p class="sidebar-role">Administrator</p>
+            <nav class="sidebar-nav" aria-label="Administrator navigation">
+                <a class="sidebar-link" href="#">Dashboard</a>
+                <a class="sidebar-link" href="#">Restaurant Applications</a>
+                <a class="sidebar-link" href="#">Rider Applications</a>
+                <a class="sidebar-link" href="#">Delivery Zones</a>
+                <a class="sidebar-link" href="#">Delivery Fee</a>
+                <a class="sidebar-link active" href="#">Orders &amp; Riders</a>
+                <a class="sidebar-link" href="#">Delivery Problems</a>
+                <a class="sidebar-link" href="#">Refunds</a>
+                <a class="sidebar-link" href="#">Account Profile</a>
+            </nav>
+            <a class="sidebar-logout" href="#">Logout</a>
+        </aside>
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Orders &amp; rider assignment</h1>
+                <p class="page-subtitle">Assign available riders to accepted, preparing and ready orders.</p>
+            </header>
+
+            <section class="card assignment-list-card" aria-labelledby="orderListTitle">
+                <div class="assignment-list-heading">
+                    <div>
+                        <h2 id="orderListTitle">Active orders</h2>
+                        <p>Select an order to assign, reassign or unassign a rider.</p>
+                    </div>
+                    <span class="order-count" id="orderCount">3 orders</span>
+                </div>
+
+                <div class="assignment-table-wrap">
+                    <table class="assignment-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Order ID</th>
+                                <th scope="col">Customer</th>
+                                <th scope="col">Status</th>
+                                <th scope="col">Rider</th>
+                                <th scope="col">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="assignmentTableBody"></tbody>
+                    </table>
+                </div>
+                <p class="assignment-note">Only approved riders who are Online and Available can be selected. Riders already handling an active delivery are not available.</p>
+            </section>
+
+            <section class="card assignment-panel" id="assignmentPanel" aria-labelledby="assignmentPanelTitle" hidden>
+                <div class="assignment-panel-heading">
+                    <div>
+                        <h2 id="assignmentPanelTitle">Rider assignment</h2>
+                        <p id="assignmentPanelDescription">Choose an available rider for this order.</p>
+                    </div>
+                    <button class="panel-close" type="button" id="closeAssignmentPanel" aria-label="Close assignment panel">×</button>
+                </div>
+
+                <div class="selected-order-info">
+                    <span>Selected order</span>
+                    <strong id="selectedOrderId">QB-1048</strong>
+                    <span class="selected-order-status" id="selectedOrderStatus">Accepted</span>
+                </div>
+
+                <form id="assignmentForm" novalidate>
+                    <div class="assignment-form-row">
+                        <div class="assignment-field">
+                            <label class="form-label" for="riderSelect">Select rider</label>
+                            <select class="form-input" id="riderSelect" name="riderId" required>
+                                <option value="">Choose an available rider</option>
+                            </select>
+                            <small class="assignment-error" id="riderSelectError" role="alert"></small>
+                        </div>
+                        <div class="assignment-buttons">
+                            <button class="btn btn-primary" type="submit" id="assignRiderButton">Assign Rider</button>
+                            <button class="btn btn-secondary" type="button" id="unassignRiderButton" hidden>Unassign</button>
+                        </div>
+                    </div>
+                    <p class="assignment-feedback" id="assignmentFeedback" role="status" aria-live="polite"></p>
+                </form>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

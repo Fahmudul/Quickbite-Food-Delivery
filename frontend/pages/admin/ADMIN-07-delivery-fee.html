@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Fee | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/ADMIN-07-delivery-fee.css">
+    <script src="../../assets/js/pages/ADMIN-07-delivery-fee.js" defer></script>
+</head>
+<body data-user-role="admin">
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="#">QuickBite</a>
+            <p class="sidebar-role">Administrator</p>
+            <nav class="sidebar-nav" aria-label="Administrator navigation">
+                <a class="sidebar-link" href="#">Dashboard</a>
+                <a class="sidebar-link" href="#">Restaurant Applications</a>
+                <a class="sidebar-link" href="#">Rider Applications</a>
+                <a class="sidebar-link" href="#">Delivery Zones</a>
+                <a class="sidebar-link active" href="#" aria-current="page">Delivery Fee</a>
+                <a class="sidebar-link" href="#">Orders &amp; Riders</a>
+                <a class="sidebar-link" href="#">Delivery Problems</a>
+                <a class="sidebar-link" href="#">Refunds</a>
+                <a class="sidebar-link" href="#">Account Profile</a>
+            </nav>
+            <a class="sidebar-logout" href="#">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Delivery Fee</h1>
+                <p class="page-subtitle">Manage the platform-wide delivery fee for new orders.</p>
+            </header>
+
+            <section class="card fee-card" aria-labelledby="feeHeading">
+                <h2 id="feeHeading">Current delivery fee</h2>
+                <p class="fee-amount" id="currentFee">৳ 60</p>
+
+                <form id="feeForm" novalidate>
+                    <label class="form-label" for="newFee">New delivery fee (BDT)</label>
+                    <input class="form-input" id="newFee" name="newFee" type="text"
+                        inputmode="decimal" maxlength="10" autocomplete="off"
+                        placeholder="Enter new delivery fee" aria-describedby="feeError">
+                    <small class="fee-error" id="feeError" role="alert"></small>
+                    <button class="btn btn-primary fee-update-button" id="updateFeeButton" type="submit">
+                        Update delivery fee
+                    </button>
+                    <p class="fee-message" id="feeMessage" role="status" aria-live="polite"></p>
+                </form>
+
+                <p class="fee-note">The updated fee applies to new checkouts. Existing orders keep their original delivery fee.</p>
+            </section>
+            <p class="fee-access-message" id="accessMessage" role="alert" hidden>
+                Only administrators can update the delivery fee.
+            </p>
+        </main>
+    </div>
+</body>
+</html>

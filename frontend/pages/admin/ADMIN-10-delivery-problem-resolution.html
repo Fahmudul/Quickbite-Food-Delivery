@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Problem Resolution | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/ADMIN-10-delivery-problem-resolution.css">
+    <script src="../../assets/js/pages/ADMIN-10-delivery-problem-resolution.js" defer></script>
+</head>
+<body data-user-role="admin">
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="#">QuickBite</a>
+            <p class="sidebar-role">Administrator</p>
+            <nav class="sidebar-nav" aria-label="Administrator navigation">
+                <a class="sidebar-link" href="#">Dashboard</a>
+                <a class="sidebar-link" href="#">Restaurant Applications</a>
+                <a class="sidebar-link" href="#">Rider Applications</a>
+                <a class="sidebar-link" href="#">Delivery Zones</a>
+                <a class="sidebar-link" href="#">Delivery Fee</a>
+                <a class="sidebar-link" href="#">Orders &amp; Riders</a>
+                <a class="sidebar-link active" href="#">Delivery Problems</a>
+                <a class="sidebar-link" href="#">Refunds</a>
+                <a class="sidebar-link" href="#">Account Profile</a>
+            </nav>
+            <a class="sidebar-logout" href="#">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Delivery problems</h1>
+                <p class="page-subtitle">Review rider reports and record the final resolution.</p>
+            </header>
+
+            <section class="card resolution-card" aria-labelledby="resolutionOrderTitle">
+                <div class="resolution-heading">
+                    <h2 id="resolutionOrderTitle">Order #QB-1019</h2>
+                    <span class="report-status" id="reportStatus">Issue reported</span>
+                </div>
+
+                <div class="resolution-details">
+                    <div class="resolution-detail">
+                        <span>Rider</span>
+                        <strong>Jamil Uddin</strong>
+                    </div>
+                    <div class="resolution-detail">
+                        <span>Order status</span>
+                        <strong id="orderStatus">Picked Up</strong>
+                    </div>
+                    <div class="resolution-detail">
+                        <span>Customer</span>
+                        <strong>Nusrat Jahan</strong>
+                    </div>
+                    <div class="resolution-detail">
+                        <span>Payment method</span>
+                        <strong id="paymentMethod">Prepaid</strong>
+                    </div>
+                    <div class="resolution-detail">
+                        <span>Restaurant</span>
+                        <strong>Urban Bites</strong>
+                    </div>
+                    <div class="resolution-detail">
+                        <span>Payment status</span>
+                        <strong id="paymentStatus">Paid</strong>
+                    </div>
+                </div>
+
+                <div class="reported-issue">
+                    <h3>Reported issue</h3>
+                    <div class="reported-issue-content">
+                        <strong id="reportedIssueType">Customer unavailable</strong>
+                        <p id="reportedIssueDetails">The customer did not answer the phone and nobody was available at the delivery address.</p>
+                    </div>
+                </div>
+
+                <form id="resolutionForm" novalidate>
+                    <div class="form-group">
+                        <label class="form-label" for="resolutionOutcome">Resolution outcome</label>
+                        <select class="form-input" id="resolutionOutcome" name="resolutionOutcome" required>
+                            <option value="">Select final outcome</option>
+                            <option value="Failed Delivery">Failed delivery confirmed</option>
+                            <option value="Delivered">Delivery completed</option>
+                        </select>
+                        <small class="resolution-error" id="outcomeError" role="alert"></small>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="resolutionReason">Resolution note</label>
+                        <textarea class="form-input resolution-note" id="resolutionReason" name="resolutionReason"
+                            rows="4" maxlength="500" placeholder="Write the reason and details of the final decision"
+                            required></textarea>
+                        <small class="resolution-error" id="reasonError" role="alert"></small>
+                    </div>
+
+                    <div class="payment-notice" id="paymentNotice">
+                        Prepaid failed deliveries may require refund handling through QB-DEV-025.
+                    </div>
+
+                    <button class="btn btn-primary" type="submit" id="resolveProblemButton">Resolve delivery</button>
+                    <p class="resolution-feedback" id="resolutionFeedback" role="status" aria-live="polite"></p>
+                </form>
+
+                <div class="resolution-complete" id="resolutionComplete" hidden>
+                    <strong>Delivery problem resolved</strong>
+                    <p id="resolutionResultText"></p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
