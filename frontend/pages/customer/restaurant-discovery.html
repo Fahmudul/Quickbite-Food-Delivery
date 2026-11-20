@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurants | QuickBite</title>
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\base.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\pages\restaurant-discovery.css">
+</head>
+<body>
+
+  <header class="top-header">
+    <div class="brand">QuickBite</div>
+    <nav class="header-nav" id="headerNav"></nav>
+  </header>
+
+  <main class="discovery">
+    <h1>Restaurants serving your area</h1>
+
+    <div class="zone-row">
+      <label for="zoneSelect">Delivery zone</label>
+      <select id="zoneSelect"></select>
+    </div>
+
+    <div class="restaurant-grid" id="restaurantGrid"></div>
+
+    <p class="empty-message hidden" id="emptyMessage">No restaurants are available in this zone right now.</p>
+  </main>
+
+  <script src="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\js\pages\restaurant-discovery.js"></script>
+</body>
+</html>

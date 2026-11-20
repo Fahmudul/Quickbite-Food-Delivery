@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Restaurant Manager | QuickBite</title>
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\base.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\layout.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\pages\manager-dashboard.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="brand">QuickBite</div>
+      <p class="role-name">Restaurant Manager</p>
+      <nav class="sidebar-nav" id="sidebarNav"></nav>
+    </aside>
+
+    <main class="main">
+      <div class="page-heading">
+        <h1>Burger House</h1>
+        <p>Manage the restaurant's required QuickBite operations.</p>
+      </div>
+
+      <section class="card status-card">
+        <div>
+          <p class="status-label">Current restaurant status</p>
+          <span class="chip chip-green" id="statusChip">Accepting Orders</span>
+        </div>
+        <a href="manager-operating-status.html" class="btn-secondary">Manage status</a>
+      </section>
+
+      <h2 class="section-title">Quick actions</h2>
+      <div class="card-grid cols-4" id="quickActions"></div>
+
+      <div class="note-box">
+        <strong>Analytics are not included in the mandatory MVP dashboard.</strong>
+        <p>The dashboard only provides access to required restaurant operations.</p>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\js\pages\manager-dashboard.js"></script>
+</body>
+</html>
