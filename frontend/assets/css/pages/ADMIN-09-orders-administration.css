@@ -1,0 +1,96 @@
+.admin-order-grid {
+    display: grid; grid-template-columns: minmax(0, 1.65fr) minmax(240px, 0.95fr);
+    align-items: start; gap: 20px;
+    max-width: 1120px;
+}.admin-order-card,
+.admin-assignment-info {
+    border-radius: 9px;
+}.admin-order-heading {
+    margin-bottom: 17px;
+}.admin-order-heading h2 {
+    margin-bottom: 8px; font-size: 19px;
+}.admin-status {
+    display: inline-block; padding: 4px 10px;
+    border-radius: 20px; font-size: 11px;
+    font-weight: 600;
+}.status-preparing {
+    background: #fff4dc; color: #a66a12;
+}.status-accepted,
+.status-ready {
+    background: #e8f8ee; color: #168344;
+}.status-picked-up {
+    background: #e8f0ff; color: #2857a4;
+}.admin-order-details {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 12px 20px; margin-bottom: 17px;
+}.admin-detail-row {
+    display: flex; justify-content: space-between;
+    gap: 10px; font-size: 12px;
+}.admin-detail-row span {
+    color: var(--muted);
+}.admin-detail-row strong {
+    text-align: right;
+}.admin-rider-row {
+    grid-column: 1 / -1;
+}.admin-items-box {
+    margin-bottom: 16px; padding: 12px;
+    border: 1px solid var(--border); border-radius: 7px;
+    font-size: 12px;
+}.admin-items-box p {
+    margin: 5px 0 0; color: var(--muted);
+}.rider-control-section {
+    padding-top: 15px; border-top: 1px solid var(--border);
+}.rider-control-section h3 {
+    margin-bottom: 6px; font-size: 15px;
+}.rider-control-description {
+    margin-bottom: 13px; color: var(--muted);
+    font-size: 11px; line-height: 1.5;
+}.rider-control-section select {
+    min-height: 41px;
+}.admin-rider-error {
+    display: block; min-height: 17px;
+    margin-top: 4px; color: var(--danger);
+    font-size: 11px;
+}.admin-rider-actions {
+    display: flex; gap: 8px;
+    margin-top: 8px;
+}.admin-rider-actions .btn {
+    min-width: 120px;
+}.admin-rider-actions .btn:disabled {
+    opacity: 0.5; cursor: not-allowed;
+}.admin-rider-feedback {
+    min-height: 18px; margin: 10px 0 0;
+    color: var(--success); font-size: 12px;
+}.admin-assignment-info h2 {
+    margin-bottom: 14px; font-size: 16px;
+}.admin-assignment-info p {
+    margin-bottom: 12px; color: var(--muted);
+    font-size: 12px; line-height: 1.6;
+}.admin-rule-note {
+    display: flex; flex-direction: column;
+    gap: 6px; margin-top: 15px;
+    padding: 12px; border-radius: 7px;
+    background: var(--background); font-size: 11px;
+    line-height: 1.5;
+}.admin-rule-note span {
+    color: var(--muted);
+}.invalid {
+    border-color: var(--danger) !important;
+}[hidden] {
+    display: none !important;
+}
+@media (max-width: 850px) {.admin-order-grid {
+    grid-template-columns: 1fr;
+}
+}
+@media (max-width: 600px) {.admin-order-details {
+    grid-template-columns: 1fr;
+}.admin-order-card,
+    .admin-assignment-info {
+    padding: 15px;
+}.admin-rider-actions {
+    flex-direction: column;
+}.admin-rider-actions .btn {
+    width: 100%;
+}
+}

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Administration | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/ADMIN-09-orders-administration.css">
+    <script src="../../assets/js/pages/ADMIN-09-orders-administration.js" defer></script>
+</head>
+<body data-user-role="admin">
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="#">QuickBite</a>
+            <p class="sidebar-role">Administrator</p>
+            <nav class="sidebar-nav" aria-label="Administrator navigation">
+                <a class="sidebar-link" href="#">Dashboard</a>
+                <a class="sidebar-link" href="#">Restaurant Applications</a>
+                <a class="sidebar-link" href="#">Rider Applications</a>
+                <a class="sidebar-link" href="#">Delivery Zones</a>
+                <a class="sidebar-link" href="#">Delivery Fee</a>
+                <a class="sidebar-link active" href="#">Orders &amp; Riders</a>
+                <a class="sidebar-link" href="#">Delivery Problems</a>
+                <a class="sidebar-link" href="#">Refunds</a>
+                <a class="sidebar-link" href="#">Account Profile</a>
+            </nav>
+            <a class="sidebar-logout" href="#">Logout</a>
+        </aside>
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Order administration</h1>
+                <p class="page-subtitle">Review order information and manage its rider assignment.</p>
+            </header>
+
+            <div class="admin-order-grid">
+                <section class="card admin-order-card" aria-labelledby="adminOrderTitle">
+                    <div class="admin-order-heading">
+                        <div>
+                            <h2 id="adminOrderTitle">Order #QB-1048</h2>
+                            <span class="admin-status status-preparing" id="adminOrderStatus">Preparing</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-order-details">
+                        <div class="admin-detail-row">
+                            <span>Customer</span>
+                            <strong>Rahim Ahmed</strong>
+                        </div>
+                        <div class="admin-detail-row">
+                            <span>Restaurant</span>
+                            <strong>Urban Bites</strong>
+                        </div>
+                        <div class="admin-detail-row">
+                            <span>Payment</span>
+                            <strong>Cash on Delivery</strong>
+                        </div>
+                        <div class="admin-detail-row">
+                            <span>Total</span>
+                            <strong>৳540</strong>
+                        </div>
+                        <div class="admin-detail-row admin-rider-row">
+                            <span>Assigned rider</span>
+                            <strong id="assignedRiderName">Kamal Hossain</strong>
+                        </div>
+                    </div>
+
+                    <div class="admin-items-box">
+                        <strong>Order items</strong>
+                        <p>Chicken Burger × 1, French Fries × 1, Soft Drink × 1</p>
+                    </div>
+
+                    <section class="rider-control-section" aria-labelledby="riderControlTitle">
+                        <h3 id="riderControlTitle">Rider assignment</h3>
+                        <p class="rider-control-description">Assign an available rider, change the current rider or remove the assignment before pickup.</p>
+                        <form id="adminRiderForm" novalidate>
+                            <label class="form-label" for="adminRiderSelect">Select rider</label>
+                            <select class="form-input" id="adminRiderSelect" name="riderId" required>
+                                <option value="">Choose an available rider</option>
+                            </select>
+                            <small class="admin-rider-error" id="adminRiderError" role="alert"></small>
+                            <div class="admin-rider-actions">
+                                <button class="btn btn-primary" type="submit" id="adminAssignButton">Reassign Rider</button>
+                                <button class="btn btn-secondary" type="button" id="adminUnassignButton">Unassign Rider</button>
+                            </div>
+                            <p class="admin-rider-feedback" id="adminRiderFeedback" role="status" aria-live="polite"></p>
+                        </form>
+                    </section>
+                </section>
+
+                <aside class="card admin-assignment-info">
+                    <h2>Rider assignment rules</h2>
+                    <p>Riders can be assigned after an order is Accepted while the restaurant continues preparation.</p>
+                    <p>Only approved riders with Online and Available status can be selected.</p>
+                    <p>An order can have only one active rider, and a rider can have only one active delivery.</p>
+                    <p>Assignment, reassignment and unassignment are available only before pickup.</p>
+                    <div class="admin-rule-note">
+                        <strong>After pickup</strong>
+                        <span>Rider assignment cannot be changed once the order is Picked Up.</span>
+                    </div>
+                </aside>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
