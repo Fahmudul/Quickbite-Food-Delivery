@@ -1,19 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8fafc;
-  color: #1f2937;
-  line-height: 1.5;
 }
 
 .navbar {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
 }
 
 .navbar-inner {
@@ -26,7 +17,7 @@ body {
 }
 
 .navbar-logo {
-  color: #f25555;
+  color: var(--primary);
   font-size: 22px;
   font-weight: 800;
   text-decoration: none;
@@ -47,7 +38,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #f25555;
+  color: var(--primary);
 }
 
 .page-content {
@@ -59,7 +50,7 @@ body {
 .page-title {
   font-size: 28px;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text);
   margin-bottom: 24px;
 }
 
@@ -72,22 +63,22 @@ body {
 
 .filter-bar label {
   font-size: 14px;
-  color: #6b7280;
+  color: var(--muted);
 }
 
 .filter-bar select {
   font-family: inherit;
   font-size: 14px;
-  color: #1f2937;
+  color: var(--text);
   padding: 10px 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid var(--border);
   border-radius: 8px;
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 .filter-bar select:focus {
   outline: none;
-  border-color: #f25555;
+  border-color: var(--primary);
 }
 
 .restaurant-grid {
@@ -98,7 +89,7 @@ body {
 
 .restaurant-card {
   display: block;
-  background-color: #ffffff;
+  background-color: var(--white);
   border: 1px solid #eef0f3;
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
@@ -124,13 +115,13 @@ body {
 .restaurant-name {
   font-size: 17px;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text);
   margin-bottom: 4px;
 }
 
 .restaurant-meta {
   font-size: 13px;
-  color: #6b7280;
+  color: var(--muted);
   margin-bottom: 12px;
 }
 
@@ -150,10 +141,10 @@ body {
 
 .no-results-message {
   font-size: 14px;
-  color: #6b7280;
+  color: var(--muted);
   padding: 20px;
   text-align: center;
-  background-color: #ffffff;
+  background-color: var(--white);
   border: 1px solid #eef0f3;
   border-radius: 14px;
 }
@@ -173,8 +164,8 @@ body {
   margin-left: 4px;
   padding: 1px 5px;
   border-radius: 999px;
-  background-color: #f25555;
-  color: #ffffff;
+  background-color: var(--primary);
+  color: var(--white);
   font-size: 11px;
   font-weight: 700;
   text-align: center;

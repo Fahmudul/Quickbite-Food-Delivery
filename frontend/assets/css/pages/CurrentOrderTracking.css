@@ -1,19 +1,11 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f8fafc;
-  color: #1f2937;
-  line-height: 1.5;
 }
 
 .navbar {
-  background-color: #ffffff;
-  border-bottom: 1px solid #e5e7eb;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--border);
 }
 
 .navbar-inner {
@@ -26,7 +18,7 @@ body {
 }
 
 .navbar-logo {
-  color: #f25555;
+  color: var(--primary);
   font-size: 22px;
   font-weight: 800;
   text-decoration: none;
@@ -47,7 +39,7 @@ body {
 
 .nav-link:hover,
 .nav-link.active {
-  color: #f25555;
+  color: var(--primary);
 }
 
 .cart-count {
@@ -56,8 +48,8 @@ body {
   margin-left: 4px;
   padding: 1px 5px;
   border-radius: 999px;
-  background-color: #f25555;
-  color: #ffffff;
+  background-color: var(--primary);
+  color: var(--white);
   font-size: 11px;
   font-weight: 700;
   text-align: center;
@@ -81,7 +73,7 @@ body {
 }
 
 .tracking-main {
-  background-color: #ffffff;
+  background-color: var(--white);
   border: 1px solid #eef0f3;
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
@@ -91,7 +83,7 @@ body {
 .order-id-heading {
   font-size: 24px;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text);
   margin-bottom: 12px;
 }
 
@@ -113,7 +105,7 @@ body {
 
 .tracking-subtitle {
   font-size: 13px;
-  color: #6b7280;
+  color: var(--muted);
   margin-bottom: 8px;
 }
 
@@ -149,7 +141,7 @@ body {
   height: 14px;
   border-radius: 50%;
   border: 2px solid #d1d5db;
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 .step-title {
@@ -175,12 +167,12 @@ body {
 
 .status-step.step-active .step-title,
 .status-step.step-active .step-desc {
-  color: #1f2937;
+  color: var(--text);
 }
 
 .status-step.step-complete .step-dot {
   border-color: #16a34a;
-  background-color: #ffffff;
+  background-color: var(--white);
 }
 
 .status-step.step-complete .step-title,
@@ -196,17 +188,17 @@ body {
   font-family: inherit;
   font-size: 14px;
   font-weight: 600;
-  color: #1f2937;
-  background-color: #ffffff;
-  border: 1px solid #e5e7eb;
+  color: var(--text);
+  background-color: var(--white);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 12px 20px;
   cursor: pointer;
 }
 
 .btn-cancel-order:hover {
-  border-color: #f25555;
-  color: #f25555;
+  border-color: var(--primary);
+  color: var(--primary);
 }
 
 .btn-cancel-order:disabled {
@@ -215,7 +207,7 @@ body {
 }
 
 .btn-cancel-order:disabled:hover {
-  border-color: #e5e7eb;
+  border-color: var(--border);
   color: #d1d5db;
 }
 
@@ -225,10 +217,25 @@ body {
   margin-top: 10px;
 }
 
+.btn-leave-review {
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--white);
+  background-color: var(--primary);
+  border-radius: 8px;
+  padding: 12px 20px;
+  text-decoration: none;
+}
+
+.btn-leave-review:hover {
+  background-color: #e23e3e;
+}
+
 .login-card {
   width: 100%;
   max-width: 440px;
-  background-color: #ffffff;
+  background-color: var(--white);
   border: 1px solid #eef0f3;
   border-radius: 14px;
   box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
@@ -238,7 +245,7 @@ body {
 .card-title {
   font-size: 22px;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text);
   margin-bottom: 8px;
 }
 
@@ -253,25 +260,24 @@ body {
   justify-content: space-between;
   padding-bottom: 14px;
   margin-bottom: 14px;
-  border-bottom: 1px solid #e5e7eb;
+  border-bottom: 1px solid var(--border);
 }
 
 .order-detail-label {
   font-size: 14px;
-  color: #6b7280;
+  color: var(--muted);
 }
 
 .order-detail-value {
   font-size: 15px;
   font-weight: 700;
-  color: #1f2937;
+  color: var(--text);
 }
 
 .order-detail-note {
   font-size: 12px;
   color: #94a3b8;
 }
-
 
 @media (max-width: 800px) {
   .tracking-layout {
