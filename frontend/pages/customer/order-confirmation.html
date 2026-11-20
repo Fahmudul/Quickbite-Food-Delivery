@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Confirmation | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/pages/customer-checkout.css">
+</head>
+<body class="customer-layout">
+  <header class="customer-header">
+    <div class="customer-header-inner">
+      <a class="customer-brand" href="../../index.html">QuickBite</a>
+      <nav class="customer-nav" aria-label="Customer navigation">
+        <a href="./restaurants.html">Restaurants</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./orders.html">Orders</a>
+        <a href="./addresses.html">Addresses</a>
+        <a href="./profile.html">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="confirmation-page">
+    <span class="status-pill">Accepted</span>
+    <h1>Order placed successfully</h1>
+    <p>Order #QB-1048 has been accepted automatically and sent to Burger House for preparation.</p>
+    <section class="confirmation-card" aria-label="Order summary">
+      <dl>
+        <div><dt>Restaurant</dt><dd>Burger House</dd></div>
+        <div><dt>Payment</dt><dd>Cash on Delivery</dd></div>
+        <div><dt>Total</dt><dd>৳ 520</dd></div>
+        <div><dt>Status</dt><dd>Accepted</dd></div>
+      </dl>
+    </section>
+    <a class="btn btn-primary track-order-button" href="./current-order.html?order=QB-1048">Track order</a>
+  </main>
+</body>
+</html>

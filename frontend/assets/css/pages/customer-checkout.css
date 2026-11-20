@@ -1,0 +1,193 @@
+.checkout-page {
+  display: grid;
+  grid-template-columns: minmax(0, 790px) 390px;
+  gap: 28px;
+  align-items: start;
+}
+
+.checkout-content > h1 {
+  margin: 0 0 14px;
+  font-size: 30px;
+}
+
+.checkout-card,
+.order-summary,
+.confirmation-card {
+  background: var(--qb-surface);
+  border: 1px solid var(--qb-border);
+  border-radius: 12px;
+}
+
+.checkout-card {
+  padding: 20px;
+}
+
+.checkout-card + .checkout-card {
+  margin-top: 18px;
+}
+
+.checkout-card h2,
+.payment-card legend {
+  margin: 0 0 12px;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.address-card strong {
+  font-size: 14px;
+}
+
+.address-card p {
+  margin: 8px 0;
+  color: var(--qb-text-secondary);
+  font-size: 13px;
+}
+
+.address-card a {
+  font-size: 13px;
+}
+
+.payment-card fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.payment-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 76px;
+  padding: 14px 16px;
+  border: 1px solid var(--qb-border);
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.payment-option + .payment-option {
+  margin-top: 12px;
+}
+
+.payment-option input {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--qb-brand);
+}
+
+.payment-option strong,
+.payment-option small {
+  display: block;
+}
+
+.payment-option strong {
+  font-size: 16px;
+}
+
+.payment-option small {
+  color: var(--qb-text-secondary);
+  font-size: 12px;
+}
+
+.form-error {
+  min-height: 18px;
+  margin: 8px 0 0;
+  color: var(--danger);
+  font-size: 13px;
+}
+
+.order-summary {
+  padding: 20px;
+}
+
+.order-summary h2 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.order-summary dl,
+.confirmation-card dl {
+  margin: 0;
+}
+
+.order-summary dl div,
+.confirmation-card dl div {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 8px 0;
+  font-size: 13px;
+}
+
+.order-summary dt,
+.confirmation-card dt {
+  color: var(--qb-text-secondary);
+}
+
+.order-summary dd,
+.confirmation-card dd {
+  margin: 0;
+}
+
+.summary-total {
+  margin-top: 2px;
+}
+
+.place-order-button {
+  width: 100%;
+  min-height: 44px;
+  margin-top: 10px;
+}
+
+.confirmation-page {
+  width: calc(100% - 40px);
+  max-width: 650px;
+  margin: 24px auto 0;
+  text-align: center;
+}
+
+.confirmation-page h1 {
+  margin: 14px 0 10px;
+  font-size: 30px;
+}
+
+.confirmation-page > p {
+  color: var(--qb-text-secondary);
+  font-size: 14px;
+}
+
+.status-pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #dcfce7;
+  color: #16a34a;
+  font-size: 12px;
+}
+
+.confirmation-card {
+  margin-top: 18px;
+  padding: 12px 20px;
+  text-align: left;
+}
+
+.track-order-button {
+  min-width: 200px;
+  margin-top: 20px;
+}
+
+@media (max-width: 900px) {
+  .checkout-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .customer-header-inner {
+    padding: 0 20px;
+  }
+
+  .customer-nav a:not(:nth-child(2)) {
+    display: none;
+  }
+}

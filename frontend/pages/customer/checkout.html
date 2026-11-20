@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/pages/customer-checkout.css">
+</head>
+<body class="customer-layout">
+  <header class="customer-header">
+    <div class="customer-header-inner">
+      <a class="customer-brand" href="../../index.html">QuickBite</a>
+      <nav class="customer-nav" aria-label="Customer navigation">
+        <a href="./restaurants.html">Restaurants</a>
+        <a href="./cart.html">Cart</a>
+        <a href="./orders.html">Orders</a>
+        <a href="./addresses.html">Addresses</a>
+        <a href="./profile.html">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="checkout-page customer-main">
+    <div class="checkout-content">
+      <h1>Checkout</h1>
+      <section class="checkout-card address-card" aria-labelledby="address-title">
+        <h2 id="address-title">Delivery address</h2>
+        <strong>Home</strong>
+        <p>House 12, Road 7, Uttara • Zone: Uttara</p>
+        <a href="./addresses.html">Change address</a>
+      </section>
+
+      <form id="checkout-form" class="checkout-card payment-card" novalidate>
+        <fieldset>
+          <legend>Payment method</legend>
+          <label class="payment-option">
+            <input type="radio" name="payment-method" value="cod" checked>
+            <span><strong>Cash on Delivery</strong><small>Pay the rider when the order is delivered.</small></span>
+          </label>
+          <label class="payment-option">
+            <input type="radio" name="payment-method" value="online">
+            <span><strong>Online Payment — Sandbox</strong><small>Use the permitted test payment gateway. No real money is charged.</small></span>
+          </label>
+        </fieldset>
+        <p class="form-error" id="payment-error" role="alert"></p>
+      </form>
+    </div>
+
+    <aside class="order-summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Order summary</h2>
+      <dl>
+        <div><dt>Classic Burger ×1</dt><dd>৳ 320</dd></div>
+        <div><dt>French Fries ×1</dt><dd>৳ 140</dd></div>
+        <div><dt>Delivery fee</dt><dd>৳ 60</dd></div>
+        <div class="summary-total"><dt>Total</dt><dd>৳ 520</dd></div>
+      </dl>
+      <button class="btn btn-primary place-order-button" type="submit" form="checkout-form">Place order</button>
+    </aside>
+  </main>
+
+  <script type="module" src="../../assets/js/pages/cod-checkout.js"></script>
+</body>
+</html>
