@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Restaurants</title>
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\base.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\layout.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\pages\RestaurantDiscovery.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\RestaurantDiscovery.html" class="navbar-logo">QuickBite</a>
+
+      <ul class="navbar-links">
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\RestaurantDiscovery.html" class="nav-link active">Restaurants</a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\ActiveCart.html" class="nav-link">Cart<span class="cart-count" id="cartCount"></span></a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\OrderHistory.html" class="nav-link">Orders</a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\SavedAddresses.html" class="nav-link">Addresses</a></li>
+        <li><a href="#" class="nav-link">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-content">
+
+    <h1 class="page-title">Restaurants serving your area</h1>
+    <form class="filter-bar" action="#" method="get">
+      <label for="deliveryArea">Delivery area</label>
+      <select id="deliveryArea" name="deliveryArea">
+        <option value="dhaka" selected>Dhaka</option>
+        <option value="chattogram">Chattogram</option>
+        <option value="sylhet">Sylhet</option>
+        <option value="khulna">Khulna</option>
+      </select>
+    </form>
+
+    <div class="restaurant-grid" id="restaurantGrid">
+
+      <a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\RestaurantMenu.html" class="restaurant-card" data-zone="dhaka">
+        <div class="restaurant-image">Restaurant image</div>
+        <div class="restaurant-info">
+          <h2 class="restaurant-name">Burger House</h2>
+          <p class="restaurant-meta">Burgers &bull; 20-30 min</p>
+          <span class="status-badge">Accepting Orders</span>
+        </div>
+      </a>
+
+      <article class="restaurant-card" data-zone="dhaka">
+        <div class="restaurant-image">Restaurant image</div>
+        <div class="restaurant-info">
+          <h2 class="restaurant-name">Spice Kitchen</h2>
+          <p class="restaurant-meta">Indian &bull; 25-35 min</p>
+          <span class="status-badge">Accepting Orders</span>
+        </div>
+      </article>
+
+      <article class="restaurant-card is-closed" data-zone="chattogram">
+        <div class="restaurant-image">Restaurant image</div>
+        <div class="restaurant-info">
+          <h2 class="restaurant-name">Pizza Corner</h2>
+          <p class="restaurant-meta">Pizza &bull; 15-25 min</p>
+          <span class="status-badge status-badge-closed">Closed</span>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="no-results-message hidden" id="noResultsMessage">No restaurants are currently serving this delivery area.</p>
+  </main>
+
+  <script src="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\js\pages\RestaurantDiscovery.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Login</title>
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\base.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\layout.css">
+
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\pages\Login.css">
+</head>
+<body>
+
+
+  <div class="page">
+
+    <div class="brand-panel">
+      <div class="brand-content">
+        <h1 class="brand-name">QuickBite</h1>
+        <h2 class="brand-heading">Food ordering and delivery management made simple.</h2>
+        <p class="brand-text">One platform for customers, restaurants, riders and your business.</p>
+      </div>
+    </div>
+
+
+    <div class="form-panel">
+      <div class="login-card">
+
+        <h2 class="card-title">Welcome back</h2>
+        <p class="card-subtitle">Sign in to access your QuickBite dashboard.</p>
+
+        <p class="form-error-message" id="formError"></p>
+
+        <form id="loginForm" action="#" method="post" novalidate>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+            <span class="field-error" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Enter your password" required>
+            <span class="field-error" id="passwordError"></span>
+          </div>
+
+          <button type="submit" class="btn-login" id="loginBtn">Log In</button>
+
+        </form>
+
+        <a href="#" class="link-forgot">Forgot password?</a>
+        <a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\auth\CustomerRegistration.html" class="link-register">Create a customer account</a>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\js\pages\Login.js"></script>
+
+</body>
+</html>

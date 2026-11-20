@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Order Tracking</title>
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\base.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\layout.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\pages\CurrentOrderTracking.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\RestaurantDiscovery.html" class="navbar-logo">QuickBite</a>
+
+      <ul class="navbar-links">
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\RestaurantDiscovery.html" class="nav-link">Restaurants</a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\ActiveCart.html" class="nav-link">Cart<span class="cart-count" id="cartCount"></span></a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\OrderHistory.html" class="nav-link active">Orders</a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\SavedAddresses.html" class="nav-link">Addresses</a></li>
+        <li><a href="#" class="nav-link">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <main class="page-content">
+    <div class="tracking-layout">
+
+
+      <section class="tracking-main">
+
+        <h1 class="order-id-heading" id="orderIdHeading">Order #QB-1048</h1>
+        <span class="status-badge" id="orderStatusBadge">Accepted</span>
+
+        <p class="tracking-subtitle" id="trackingSubtitle">Status updates automatically while this page is open.</p>
+
+        <p class="retry-notice hidden" id="retryNotice">Couldn't refresh the latest status. Retrying&hellip;</p>
+
+        <div class="status-steps" id="statusSteps">
+
+          <div class="status-step" data-status="accepted">
+            <span class="step-dot"></span>
+            <div class="step-text">
+              <h2 class="step-title">Accepted</h2>
+              <p class="step-desc">Order received by the restaurant</p>
+            </div>
+          </div>
+
+          <div class="status-step" data-status="preparing">
+            <span class="step-dot"></span>
+            <div class="step-text">
+              <h2 class="step-title">Preparing</h2>
+              <p class="step-desc">Restaurant is preparing your order</p>
+            </div>
+          </div>
+
+          <div class="status-step" data-status="ready">
+            <span class="step-dot"></span>
+            <div class="step-text">
+              <h2 class="step-title">Ready for Pickup</h2>
+              <p class="step-desc">Waiting for a rider to collect your order</p>
+            </div>
+          </div>
+
+          <div class="status-step" data-status="pickedup">
+            <span class="step-dot"></span>
+            <div class="step-text">
+              <h2 class="step-title">Picked Up</h2>
+              <p class="step-desc">Rider has picked up your order</p>
+            </div>
+          </div>
+
+          <div class="status-step" data-status="delivered">
+            <span class="step-dot"></span>
+            <div class="step-text">
+              <h2 class="step-title">Delivered</h2>
+              <p class="step-desc">Your order has been delivered</p>
+            </div>
+          </div>
+
+        </div>
+
+        <button type="button" class="btn-cancel-order" id="cancelOrderBtn">Cancel order</button>
+        <p class="cancel-note" id="cancelNote">You can cancel this order only while it's still Accepted or Preparing.</p>
+
+      </section>
+
+      <section class="login-card order-details-card">
+        <h2 class="card-title">Order details</h2>
+
+        <div class="order-detail-row">
+          <span class="order-detail-label">Restaurant</span>
+          <span class="order-detail-value" id="detailRestaurant">Burger House</span>
+        </div>
+        <div class="order-detail-row">
+          <span class="order-detail-label">Items</span>
+          <span class="order-detail-value" id="detailItems">3 items</span>
+        </div>
+        <div class="order-detail-row">
+          <span class="order-detail-label">Payment</span>
+          <span class="order-detail-value" id="detailPayment">COD</span>
+        </div>
+        <div class="order-detail-row">
+          <span class="order-detail-label">Total</span>
+          <span class="order-detail-value" id="detailTotal">&#2547;430</span>
+        </div>
+
+        <p class="order-detail-note" id="detailNote">Delivered to House 12, Road 5, Dhanmondi, Dhaka.</p>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\js\pages\CurrentOrderTracking.js"></script>
+
+</body>
+</html>
