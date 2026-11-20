@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Your Cart</title>
+
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\pages\ActiveCart.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\RestaurantDiscovery.html" class="navbar-logo">QuickBite</a>
+
+      <ul class="navbar-links">
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\RestaurantDiscovery.html" class="nav-link">Restaurants</a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\ActiveCart.html" class="nav-link active">Cart</a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\OrderHistory.html" class="nav-link">Orders</a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\SavedAddresses.html" class="nav-link">Addresses</a></li>
+        <li><a href="#" class="nav-link">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-content">
+
+    <h1 class="page-title" id="cartPageTitle">Your cart</h1>
+
+    <div class="cart-layout">
+
+      <section class="cart-main">
+
+        <div class="inventory-notice">
+          <span class="inventory-text">Inventory reserved for this cart</span>
+          <span class="inventory-timer">12:54 remaining</span>
+        </div>
+
+        <p class="no-results-message hidden" id="emptyCartMessage">Your cart is empty. Add something from a restaurant's menu first.</p>
+
+        <div class="cart-items" id="cartItemsContainer"></div>
+
+        <div class="cart-conflict-card hidden" id="cartConflictCard">
+          <p class="conflict-tag" id="conflictTag">CART CONFLICT &bull; Switching restaurants clears your cart</p>
+          <h2 class="conflict-heading">Replace your current cart?</h2>
+          <p class="conflict-text" id="conflictText">Your cart currently has items from another restaurant. Adding this item will clear your current cart and start a new one.</p>
+          <div class="conflict-actions">
+            <button type="button" class="btn-keep-cart" id="keepCartBtn">Keep current cart</button>
+            <button type="button" class="btn-replace-cart" id="replaceCartBtn">Replace cart</button>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="login-card order-summary-card">
+        <h2 class="card-title">Order summary</h2>
+
+        <div class="order-summary-row">
+          <span class="order-summary-label">Items</span>
+          <span class="order-summary-value" id="orderSummaryValue">&#2547;0</span>
+        </div>
+
+        <p class="order-summary-note">Delivery fee calculated at checkout.</p>
+
+        <button type="button" class="btn-login" id="checkoutBtn">Continue to checkout</button>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\js\pages\ActiveCart.js"></script>
+
+</body>
+</html>
