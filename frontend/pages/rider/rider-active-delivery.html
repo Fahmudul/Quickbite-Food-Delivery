@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active Delivery | Delivery Rider | QuickBite</title>
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\base.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\layout.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\pages\rider-active-delivery.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="brand">QuickBite</div>
+      <p class="role-name">Delivery Rider</p>
+      <nav class="sidebar-nav" id="sidebarNav"></nav>
+    </aside>
+
+    <main class="main">
+      <div class="page-heading">
+        <h1>Active delivery</h1>
+        <p>Complete the delivery after pickup, or report a delivery problem.</p>
+      </div>
+
+      <div class="delivery-layout" id="deliveryLayout">
+
+        <section class="card delivery-card">
+          <div class="delivery-header">
+            <h2 id="orderTitle"></h2>
+            <span class="chip chip-yellow" id="statusChip"></span>
+          </div>
+
+          <p class="info-label">Deliver to</p>
+          <p class="info-name" id="customerName"></p>
+          <p class="info-address" id="customerAddress"></p>
+
+          <div class="cod-box" id="codBox">
+            <p class="cod-title">Cash on Delivery</p>
+            <p class="cod-text" id="codText"></p>
+            <label class="check-row" id="cashRow">
+              <input type="checkbox" id="cashCollected">
+              <span>Cash collected</span>
+            </label>
+            <p class="error-text" id="cashError"></p>
+          </div>
+
+          <div class="button-row">
+            <button type="button" class="btn-primary" id="completeBtn">Complete Delivery</button>
+            <a href="rider-report-problem.html" class="btn-secondary" id="reportLink">Report Problem</a>
+          </div>
+
+          <p class="pickup-note hidden" id="statusNote"></p>
+          <div class="message-box hidden" id="messageBox"></div>
+        </section>
+
+        <aside class="card summary-card">
+          <h3>Delivery summary</h3>
+
+          <div class="summary-row">
+            <span>Restaurant</span>
+            <span id="restaurantText"></span>
+          </div>
+          <div class="summary-row">
+            <span>Payment</span>
+            <span id="paymentText"></span>
+          </div>
+          <div class="summary-row">
+            <span>Amount</span>
+            <span id="amountText"></span>
+          </div>
+
+          <p class="summary-note">Successful completion marks the order Delivered and releases this assignment.</p>
+        </aside>
+
+      </div>
+
+      <section class="card empty-card hidden" id="noAssignment">
+        <h2>No active delivery</h2>
+        <p>You do not have an assigned delivery right now.</p>
+        <a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\rider\rider-dashboard.html" class="btn-primary">Back to dashboard</a>
+      </section>
+    </main>
+
+  </div>
+
+  <script src="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\js\pages\rider-active-delivery.js"></script>
+</body>
+</html>

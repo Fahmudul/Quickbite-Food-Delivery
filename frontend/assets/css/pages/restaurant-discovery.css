@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #0f172a;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.top-header {
+  height: 70px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eef1f5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 56px;
+}
+
+.brand {
+  font-size: 20px;
+  font-weight: 600;
+  color: #f25555;
+}
+
+.header-nav {
+  display: flex;
+  gap: 26px;
+}
+
+.header-nav a {
+  font-size: 13px;
+  color: #0f172a;
+  text-decoration: none;
+}
+
+.header-nav a:hover {
+  color: #f25555;
+}
+
+.header-nav a.active {
+  color: #f25555;
+  font-weight: 600;
+}
+
+.discovery {
+  max-width: 1240px;
+  padding: 40px 100px 60px;
+}
+
+.discovery h1 {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.zone-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+.zone-row label {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.zone-row select {
+  width: 240px;
+  height: 46px;
+  padding: 0 14px;
+  font-family: inherit;
+  font-size: 14px;
+  color: #0f172a;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.zone-row select:focus {
+  outline: none;
+  border-color: #f25555;
+}
+
+.restaurant-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 26px;
+}
+
+.restaurant-card {
+  background-color: #ffffff;
+  border: 1px solid #eef1f5;
+  border-radius: 16px;
+  padding: 14px 14px 24px;
+}
+
+.restaurant-image {
+  height: 128px;
+  background-color: #e2e8f0;
+  border-radius: 14px;
+  padding: 10px 14px;
+  font-size: 11px;
+  color: #475569;
+}
+
+.restaurant-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 16px;
+}
+
+.restaurant-cuisine {
+  font-size: 13px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+.status-chip {
+  display: inline-block;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  margin-top: 12px;
+}
+
+.status-open {
+  background-color: #dcfce7;
+  color: #15803d;
+}
+
+.status-closed {
+  background-color: #fee2e2;
+  color: #b91c1c;
+}
+
+.empty-message {
+  font-size: 14px;
+  color: #64748b;
+  margin-top: 10px;
+}
+
+@media (max-width: 800px) {
+  .top-header {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+  }
+
+  .header-nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .discovery {
+    padding: 28px 20px 40px;
+  }
+
+  .zone-row {
+    flex-wrap: wrap;
+  }
+}
