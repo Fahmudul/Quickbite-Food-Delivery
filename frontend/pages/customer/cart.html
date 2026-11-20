@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Active Cart | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/pages/customer-cart.css">
+</head>
+<body class="customer-layout">
+  <header class="customer-header">
+    <div class="customer-header-inner">
+      <a class="customer-brand" href="../../index.html">QuickBite</a>
+      <nav class="customer-nav" aria-label="Customer navigation">
+        <a href="./restaurants.html">Restaurants</a>
+        <a class="active" href="./cart.html" aria-current="page">Cart</a>
+        <a href="./orders.html">Orders</a>
+        <a href="./addresses.html">Addresses</a>
+        <a href="./profile.html">Profile</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="cart-page customer-main">
+    <section class="cart-items-panel" aria-labelledby="cart-title">
+      <h1 id="cart-title">Your cart — Burger House</h1>
+      <div class="reservation-timer" role="status">
+        <span>Inventory reserved for this cart</span>
+        <strong id="reservation-countdown" data-seconds="754">12:34 remaining</strong>
+      </div>
+
+      <div id="cart-items" class="cart-items">
+        <article class="cart-item" data-price="320">
+          <div>
+            <h2>Classic Burger</h2>
+            <p class="item-price">৳ 320</p>
+            <p class="item-note">Special instructions: No onions</p>
+          </div>
+          <div class="quantity-control" aria-label="Classic Burger quantity">
+            <button class="quantity-button" type="button" data-action="decrease" aria-label="Decrease Classic Burger quantity">−</button>
+            <span class="quantity" aria-live="polite">1</span>
+            <button class="quantity-button" type="button" data-action="increase" aria-label="Increase Classic Burger quantity">+</button>
+            <button class="remove-button" type="button" data-action="remove">Remove</button>
+          </div>
+        </article>
+
+        <article class="cart-item" data-price="140">
+          <div>
+            <h2>French Fries</h2>
+            <p class="item-price">৳ 140</p>
+            <p class="item-note">Special instructions: No onions</p>
+          </div>
+          <div class="quantity-control" aria-label="French Fries quantity">
+            <button class="quantity-button" type="button" data-action="decrease" aria-label="Decrease French Fries quantity">−</button>
+            <span class="quantity" aria-live="polite">1</span>
+            <button class="quantity-button" type="button" data-action="increase" aria-label="Increase French Fries quantity">+</button>
+            <button class="remove-button" type="button" data-action="remove">Remove</button>
+          </div>
+        </article>
+      </div>
+
+      <section class="switch-confirmation" id="switch-confirmation" aria-labelledby="switch-title">
+        <p class="interaction-label">INTERACTION STATE • Shown only when switching restaurants</p>
+        <h2 id="switch-title">Replace your current cart?</h2>
+        <p>Your cart contains Burger House items. Switching restaurants releases those reservations and replaces this cart.</p>
+        <div class="switch-actions">
+          <button class="keep-cart-button" type="button" id="keep-cart">Keep current cart</button>
+          <button class="btn btn-primary" type="button" id="replace-cart">Replace cart</button>
+        </div>
+      </section>
+    </section>
+
+    <aside class="cart-summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Order summary</h2>
+      <p>Items</p>
+      <strong id="cart-subtotal">৳ 460</strong>
+      <p class="summary-note">Delivery fee is shown at checkout.</p>
+      <a class="btn btn-primary checkout-button" href="./checkout.html">Continue to checkout</a>
+    </aside>
+  </main>
+
+  <script type="module" src="../../assets/js/pages/customer-cart.js"></script>
+</body>
+</html>
