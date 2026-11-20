@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rider Dashboard | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/P2-RIDER-01-dashboard-statistics.css">
+    <script src="../../assets/js/pages/P2-RIDER-01-dashboard-statistics.js" defer></script>
+</head>
+<body data-user-role="rider">
+    <div class="rider-layout">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="#">QuickBite</a>
+            <p class="sidebar-role">Delivery Rider</p>
+            <nav class="sidebar-nav" aria-label="Rider navigation">
+                <a class="sidebar-link active" href="#">Dashboard</a>
+                <a class="sidebar-link" href="#">Current Delivery</a>
+                <a class="sidebar-link" href="#">Delivery History</a>
+                <a class="sidebar-link" href="#">Account Profile</a>
+            </nav>
+            <a class="sidebar-logout" href="#">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <span class="optional-label">OPTIONAL P2</span>
+                <h1>Rider dashboard — Optional statistics</h1>
+                <p class="page-subtitle">Completed and failed delivery counts with your current duty status.</p>
+            </header>
+
+            <section class="rider-stat-grid" aria-label="Your delivery statistics">
+                <article class="card rider-stat-card stat-green">
+                    <p>Completed deliveries</p>
+                    <strong id="riderCompleted">0</strong>
+                    <span>Successfully delivered</span>
+                </article>
+                <article class="card rider-stat-card stat-red">
+                    <p>Failed deliveries</p>
+                    <strong id="riderFailed">0</strong>
+                    <span>Recorded failed deliveries</span>
+                </article>
+                <article class="card rider-stat-card stat-red">
+                    <p>Duty status</p>
+                    <strong id="riderDutyStatus">Offline</strong>
+                    <span>Current availability status</span>
+                </article>
+            </section>
+
+            <div class="dashboard-note">
+                <strong>Note</strong>
+                <span>These counts are based only on deliveries assigned to your rider account. This dashboard does not include earnings or delivery trends.</span>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
