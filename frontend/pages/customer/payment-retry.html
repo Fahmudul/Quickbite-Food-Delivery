@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Protected Payment | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/pages/payment-retry.css">
+</head>
+<body class="customer-layout">
+  <header class="customer-header"><div class="customer-header-inner">
+    <a class="customer-brand" href="../../index.html">QuickBite</a>
+    <nav class="customer-nav" aria-label="Customer navigation"><a href="./restaurants.html">Restaurants</a><a href="./cart.html">Cart</a><a href="./orders.html">Orders</a><a href="./addresses.html">Addresses</a><a href="./profile.html">Profile</a></nav>
+  </div></header>
+
+  <main class="protected-page customer-main" data-payment-state="failed">
+    <div class="state-column">
+      <section class="protected-card failed-state" id="failed-state">
+        <span class="state-pill">Payment failed</span>
+        <h1>Your checkout is still protected</h1>
+        <p>The confirmed payment attempt failed. Your items, address and amount remain locked during the existing protected payment window.</p>
+        <div class="window-timer" role="timer"><span>Protected payment window</span><strong id="payment-countdown" data-seconds="402">06:42 remaining</strong></div>
+        <a class="btn btn-primary retry-button" id="retry-payment" href="./sandbox-payment.html">Retry Payment</a>
+      </section>
+
+      <section class="protected-card pending-state" id="pending-state" hidden>
+        <p class="alternate-label">ALTERNATE STATE • Not a confirmed failure</p>
+        <h2>Payment verification pending</h2>
+        <p>We cannot confirm the gateway result yet. Your checkout remains locked while QuickBite checks this payment.</p>
+        <p class="pending-warning">Retry is unavailable until the previous attempt is conclusively resolved. Never show this as paid or accepted.</p>
+      </section>
+
+    </div>
+
+    <aside class="protected-card locked-checkout" aria-labelledby="locked-title">
+      <h2 id="locked-title">Locked checkout</h2>
+      <dl><div><dt>Items</dt><dd>৳ 460</dd></div><div><dt>Delivery fee</dt><dd>৳ 60</dd></div><div><dt>Total</dt><dd>৳ 520</dd></div></dl>
+      <p>Delivery address: Home, Uttara</p>
+      <small>These checkout details cannot be edited while this payment session is protected.</small>
+    </aside>
+  </main>
+  <script type="module" src="../../assets/js/pages/payment-retry.js"></script>
+</body>
+</html>
