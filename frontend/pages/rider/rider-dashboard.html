@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Delivery Rider | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/pages/rider-dashboard.css">
+  <link rel="stylesheet" href="../../assets/css/pages/rider-dashboard-statistics.css">
+</head>
+<body data-user-role="rider">
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="brand">QuickBite</div>
+      <p class="role-name">Delivery Rider</p>
+      <nav class="sidebar-nav" id="sidebarNav" aria-label="Delivery Rider navigation" data-qb-nav="rider"></nav>
+      <a class="sidebar-logout" href="../auth/login.html">Logout</a>
+    </aside>
+
+    <main class="main">
+      <div class="page-heading">
+        <h1>Rider dashboard</h1>
+        <p>Control your availability and see whether you currently have an assigned delivery.</p>
+      </div>
+
+      <!-- Optional P2 statistics (QB-OPT-002): counters inside the existing dashboard, not a separate page -->
+      <section class="rider-stat-grid" aria-label="Your delivery statistics">
+        <article class="card rider-stat-card stat-green">
+          <p>Completed deliveries</p>
+          <strong id="riderCompleted">0</strong>
+          <span>Successfully delivered</span>
+        </article>
+        <article class="card rider-stat-card stat-red">
+          <p>Failed deliveries</p>
+          <strong id="riderFailed">0</strong>
+          <span>Recorded failed deliveries</span>
+        </article>
+      </section>
+
+      <section class="card status-card">
+        <div>
+          <p class="status-label">Your availability</p>
+          <span class="chip chip-green" id="availabilityChip">Online &bull; Available</span>
+          <p class="availability-note" id="availabilityNote"></p>
+        </div>
+        <button type="button" class="btn-secondary" id="availabilityBtn">Go Offline</button>
+      </section>
+
+      <section class="card assignment-card">
+        <h2>Current assignment</h2>
+
+        <div id="assignmentDetails">
+          <p class="assignment-order" id="orderText"></p>
+          <p class="assignment-text" id="statusText"></p>
+          <p class="assignment-text">You are Busy while this assignment is active.</p>
+          <a href="../../pages/rider/rider-current-delivery.html" class="btn-primary">View current delivery</a>
+        </div>
+
+        <p class="assignment-text hidden" id="noAssignment">You do not have an assigned delivery right now.</p>
+      </section>
+
+      <div class="note-box">
+        <strong>QuickBite does not use GPS tracking or automatic rider assignment.</strong>
+        <p>Assignments are created manually by the Administrator.</p>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="../../assets/js/core/navigation.js"></script>
+
+  <script src="../../assets/js/pages/rider-dashboard.js"></script>
+  <script src="../../assets/js/pages/rider-dashboard-statistics.js"></script>
+</body>
+</html>

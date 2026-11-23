@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Refund Review | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css"><link rel="stylesheet" href="../../assets/css/layout.css"><link rel="stylesheet" href="../../assets/css/pages/admin-refunds.css">
+</head>
+<body class="admin-layout">
+  <aside class="sidebar admin-sidebar"><a class="sidebar-brand" href="../admin/admin-dashboard.html">QuickBite</a><p class="sidebar-role">Administrator</p><nav class="sidebar-nav" aria-label="Administrator navigation" data-qb-nav="admin"></nav><a class="sidebar-logout" href="../auth/login.html">Logout</a></aside>
+  <main class="main-content"><header class="page-header"><h1>Refund review</h1><p>Review a prepaid refund request without assuming a specific sandbox gateway implementation.</p></header>
+    <div class="refund-review-layout"><form id="refund-form" class="refund-review-card" novalidate><h2>Order #QB-1009</h2><span class="status status-pending" id="refund-status">Refund Pending</span><dl><div><dt>Customer</dt><dd>Hasan</dd></div><div><dt>Original payment</dt><dd>Online payment</dd></div><div><dt>Refund amount</dt><dd>৳ 620</dd></div><div><dt>Reason</dt><dd>Admin cancellation</dd></div><div><dt>Payment reference</dt><dd>PAY-TEST-1009</dd></div></dl><label for="refund-note">Refund note</label><textarea id="refund-note" name="refund-note" rows="3" required>Cancelled before preparation. Refund required.</textarea><p class="form-error" id="refund-error" role="alert"></p><div class="review-actions"><button class="btn btn-primary" id="process-refund" type="submit">Process Refund</button><a class="btn btn-secondary" href="./admin-refunds.html">Back</a></div></form>
+      <aside class="gateway-note"><h2>Gateway-dependent behavior</h2><p>If reliable sandbox refund APIs are confirmed, Process Refund calls that flow.</p><p>Otherwise the project uses the agreed admin-managed or clearly simulated fallback.</p><p>The UI must not show Refunded until the selected workflow confirms it.</p></aside></div>
+  </main><script src="../../assets/js/core/navigation.js"></script><script type="module" src="../../assets/js/pages/admin-refund-review.js"></script>
+</body></html>

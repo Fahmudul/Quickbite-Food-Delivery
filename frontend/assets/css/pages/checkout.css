@@ -1,0 +1,142 @@
+.checkout-main {
+    max-width: 1240px;
+    padding-bottom: 40px;
+}
+.checkout-main h1 {
+    margin: 0 0 20px;
+    font-size: 29px;
+    font-weight: 600;
+}
+.checkout-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.8fr) minmax(270px, 1fr);
+    align-items: start;
+    gap: 24px;
+}
+.checkout-left {
+    display: grid;
+    gap: 20px;
+}
+.checkout-card,
+.order-summary {
+    padding: 22px;
+    border-radius: 12px;
+}
+.checkout-card h2,
+.order-summary h2 {
+    margin: 0 0 17px;
+    font-size: 17px;
+    font-weight: 600;
+}
+.address-row {
+    margin-bottom: 10px;
+}
+.address-choice,
+.payment-option {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    cursor: pointer;
+}
+.address-choice input,
+.payment-option input {
+    margin: 4px 0 0;
+    accent-color: var(--primary);
+}
+.address-choice span,
+.payment-option span {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.address-choice strong,
+.payment-option strong {
+    font-size: 13px;
+    font-weight: 600;
+}
+.address-choice small,
+.payment-option small {
+    color: var(--muted);
+    font-size: 12px;
+}
+.change-address {
+    display: inline-block;
+    margin-top: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.address-options {
+    margin-top: 16px;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+.payment-option {
+    margin: 10px 0;
+    padding: 15px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+}
+.payment-option:has(input:checked) {
+    border-color: var(--primary);
+    background: #fff8f8;
+}
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 13px;
+    color: var(--muted);
+    font-size: 13px;
+}
+.summary-row span:last-child {
+    color: var(--text);
+    white-space: nowrap;
+}
+.total-row {
+    margin: 16px 0;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+    color: var(--text);
+    font-size: 15px;
+}
+.reservation-text {
+    margin: 8px 0;
+    color: var(--muted);
+    font-size: 12px;
+}
+.field-error {
+    margin: 6px 0 0;
+    color: var(--danger);
+    font-size: 12px;
+}
+.place-order {
+    width: 100%;
+    margin-top: 5px;
+}
+.place-order:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+.checkout-feedback {
+    margin: 12px 0 0;
+    color: var(--success);
+    font-size: 12px;
+}
+@media (max-width: 780px) {
+    .checkout-grid {
+        grid-template-columns: 1fr;
+    }
+    .checkout-left {
+        gap: 16px;
+    }
+}
+@media (max-width: 480px) {
+    .checkout-card,
+    .order-summary {
+        padding: 16px;
+    }
+    .checkout-main h1 {
+        font-size: 24px;
+    }
+}

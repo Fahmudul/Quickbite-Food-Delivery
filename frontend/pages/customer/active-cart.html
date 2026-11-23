@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Your Cart</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+
+  <link rel="stylesheet" href="../../assets/css/pages/active-cart.css">
+</head>
+<body>
+
+  <header class="customer-header">
+    <div class="customer-header-inner">
+      <a class="customer-brand" href="../customer/restaurant-discovery.html">QuickBite</a>
+      <nav class="customer-nav" aria-label="Customer navigation" data-qb-nav="customer"></nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+
+    <h1 class="page-title" id="cartPageTitle">Your cart</h1>
+
+    <div class="cart-layout">
+
+      <section class="cart-main">
+
+        <div class="inventory-notice">
+          <span class="inventory-text">Inventory reserved for this cart</span>
+          <span class="inventory-timer" id="reservationCountdown" role="status">15:00 remaining</span>
+        </div>
+
+        <p class="no-results-message hidden" id="emptyCartMessage">Your cart is empty. Add something from a restaurant's menu first.</p>
+
+        <div class="cart-items" id="cartItemsContainer"></div>
+
+        <div class="cart-conflict-card hidden" id="cartConflictCard">
+          <p class="conflict-tag" id="conflictTag">CART CONFLICT &bull; Switching restaurants clears your cart</p>
+          <h2 class="conflict-heading">Replace your current cart?</h2>
+          <p class="conflict-text" id="conflictText">Your cart currently has items from another restaurant. Adding this item will clear your current cart and start a new one.</p>
+          <div class="conflict-actions">
+            <button type="button" class="btn-keep-cart" id="keepCartBtn">Keep current cart</button>
+            <button type="button" class="btn-replace-cart" id="replaceCartBtn">Replace cart</button>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="login-card order-summary-card">
+        <h2 class="card-title">Order summary</h2>
+
+        <div class="order-summary-row">
+          <span class="order-summary-label">Items</span>
+          <span class="order-summary-value" id="orderSummaryValue">&#2547;0</span>
+        </div>
+
+        <p class="order-summary-note">Delivery fee calculated at checkout.</p>
+
+        <button type="button" class="btn-login" id="checkoutBtn">Continue to checkout</button>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="../../assets/js/core/navigation.js"></script>
+
+  <script src="../../assets/js/features/cart/reservation-timer.js"></script>
+  <script src="../../assets/js/pages/active-cart.js"></script>
+
+</body>
+</html>

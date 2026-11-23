@@ -225,3 +225,79 @@ body {
     width: 100%;
     max-width: 1100px;
 }
+
+/* Shared navigation (assets/js/core/navigation.js): screens not built yet */
+.customer-nav .is-disabled,
+.sidebar-nav .is-disabled {
+    color: var(--qb-text-secondary);
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.customer-nav .cart-count:not(:empty) {
+    display: inline-block;
+    min-width: 18px;
+    margin-left: 6px;
+    padding: 0 5px;
+    border-radius: 9px;
+    background: var(--qb-brand);
+    color: var(--qb-surface);
+    font-size: 11px;
+    line-height: 18px;
+    text-align: center;
+}
+
+/* Links to screens that are not built yet (dashboards) */
+.is-disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Small screens (SRS NFR-05): wrap the customer header and stack role sidebars */
+@media (max-width: 760px) {
+    .customer-header {
+        height: auto;
+    }
+
+    .customer-header-inner {
+        flex-wrap: wrap;
+        gap: 8px 16px;
+        padding: 14px 16px;
+    }
+
+    .customer-nav {
+        flex-wrap: wrap;
+        gap: 8px 16px;
+    }
+
+    .role-layout,
+    .manager-layout,
+    .rider-layout,
+    .admin-layout {
+        display: block;
+    }
+
+    .sidebar,
+    .admin-layout .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 16px;
+        border-right: 0;
+        border-bottom: 1px solid var(--qb-border);
+    }
+
+    .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .sidebar-logout {
+        margin-top: 8px;
+    }
+
+    .main-content {
+        padding: 24px 16px 32px;
+    }
+}

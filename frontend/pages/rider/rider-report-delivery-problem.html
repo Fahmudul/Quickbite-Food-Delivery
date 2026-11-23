@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Report Delivery Problem | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/rider-report-delivery-problem.css">
+    <script src="../../assets/js/core/navigation.js" defer></script>
+    <script src="../../assets/js/pages/rider-report-delivery-problem.js" defer></script>
+</head>
+<body data-user-role="rider">
+    <div class="rider-layout">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="../rider/rider-dashboard.html">QuickBite</a>
+            <p class="sidebar-role">Delivery Rider</p>
+            <nav class="sidebar-nav" aria-label="Delivery Rider navigation" data-qb-nav="rider"></nav>
+            <a class="sidebar-logout" href="../auth/login.html">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Report delivery problem</h1>
+                <p class="page-subtitle">Tell us what happened so the administrator can review the delivery issue.</p>
+            </header>
+
+            <section class="card rider-problem-card" aria-labelledby="riderOrderTitle">
+                <div class="rider-order-heading">
+                    <h2 id="riderOrderTitle">Order #QB-1048</h2>
+                    <span class="delivery-status" id="deliveryStatus">PICKED UP</span>
+                </div>
+
+                <div class="rider-order-info">
+                    <div>
+                        <span>Customer</span>
+                        <strong>Rahim Ahmed</strong>
+                    </div>
+                    <div>
+                        <span>Delivery address</span>
+                        <strong>House 12, Road 5, Dhanmondi, Dhaka</strong>
+                    </div>
+                </div>
+
+                <div class="rider-form-area" id="reportFormArea">
+                    <form id="deliveryProblemForm" novalidate>
+                        <div class="form-group">
+                            <label class="form-label" for="problemType">Issue category</label>
+                            <select class="form-input" id="problemType" name="problemType" required>
+                                <option value="">Select a delivery issue</option>
+                                <option value="Customer unavailable">Customer unavailable</option>
+                                <option value="Incorrect or unclear address">Incorrect or unclear address</option>
+                                <option value="Road blocked or inaccessible">Road blocked or inaccessible</option>
+                                <option value="Vehicle problem">Vehicle problem</option>
+                                <option value="Accident or emergency">Accident or emergency</option>
+                                <option value="Other">Other</option>
+                            </select>
+                            <small class="field-error" id="problemTypeError" role="alert"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="problemDetails">Details</label>
+                            <textarea class="form-input problem-details" id="problemDetails" name="problemDetails"
+                                rows="4" maxlength="500" placeholder="Describe the problem you faced during delivery"
+                                required></textarea>
+                            <small class="field-error" id="problemDetailsError" role="alert"></small>
+                        </div>
+
+                        <p class="form-hint">Please add a brief description of what happened so the administrator can review the report.</p>
+
+                        <div class="rider-form-actions">
+                            <button class="btn btn-primary" type="submit" id="submitProblemButton">Submit problem</button>
+                            <a class="btn btn-secondary" href="rider-active-delivery.html">Back to delivery</a>
+                        </div>
+                        <p class="form-feedback" id="riderFeedback" role="status" aria-live="polite"></p>
+                    </form>
+                </div>
+
+                <div class="report-submitted" id="reportSubmitted" hidden>
+                    <span class="submitted-mark">✓</span>
+                    <div>
+                        <strong>Problem report submitted</strong>
+                        <p>Your report has been sent to the administrator. Your order status has not been changed.</p>
+                    </div>
+                </div>
+
+                <div class="access-message" id="riderAccessMessage" hidden></div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

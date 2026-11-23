@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Administrator | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/pages/admin-dashboard.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="brand">QuickBite</div>
+      <p class="role-name">Administrator</p>
+      <nav class="sidebar-nav" id="sidebarNav" aria-label="Administrator navigation" data-qb-nav="admin"></nav>
+      <a class="sidebar-logout" href="../auth/login.html">Logout</a>
+    </aside>
+    <main class="main">
+      <div class="page-heading">
+        <h1>Administrator dashboard</h1>
+        <p>Access the required QuickBite platform-management workflows.</p>
+      </div>
+
+      <div class="card-grid cols-4" id="quickActions"></div>
+
+      <div class="card-grid cols-2 shortcut-grid" id="shortcuts"></div>
+
+      <div class="note-box">
+        <strong>Analytics are P2 optional and are not shown on the mandatory Administrator dashboard.</strong>
+        <p>This dashboard only links to required MVP management tasks.</p>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="../../assets/js/core/navigation.js"></script>
+
+  <script src="../../assets/js/pages/admin-dashboard.js"></script>
+</body>
+</html>

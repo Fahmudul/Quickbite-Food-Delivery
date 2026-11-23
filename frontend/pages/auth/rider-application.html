@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rider Application | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/pages/rider-application.css">
+</head>
+<body>
+
+  <div class="page">
+
+    <aside class="brand-panel">
+      <div class="brand-name">QuickBite</div>
+      <h2 class="brand-title">Food ordering and delivery management made simple.</h2>
+      <p class="brand-text">One platform for customers, restaurants, riders and administrators.</p>
+    </aside>
+
+    <main class="form-area">
+      <div class="form-card">
+
+        <div id="formView">
+          <h1>Become a delivery rider</h1>
+          <p class="subtitle">Submit your information and wait for administrator approval.</p>
+
+          <form id="applicationForm" novalidate>
+
+            <div class="field" id="nameField">
+              <label for="fullName">Full name</label>
+              <input type="text" id="fullName" placeholder="Enter your name">
+            </div>
+            <p class="error-text" id="nameError"></p>
+
+            <div class="field" id="emailField">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="rider@example.com">
+            </div>
+            <p class="error-text" id="emailError"></p>
+
+            <div class="field" id="phoneField">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" placeholder="01XXXXXXXXX">
+            </div>
+            <p class="error-text" id="phoneError"></p>
+
+            <div class="field" id="vehicleField">
+              <label for="vehicle">Vehicle type</label>
+              <select id="vehicle">
+                <option value="">Select vehicle type</option>
+                <option value="Motorbike">Motorbike</option>
+                <option value="Bicycle">Bicycle</option>
+              </select>
+            </div>
+            <p class="error-text" id="vehicleError"></p>
+
+            <div class="field" id="passwordField">
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="Create a password">
+            </div>
+            <p class="error-text" id="passwordError"></p>
+
+            <button type="submit" class="btn-primary">Submit application</button>
+          </form>
+
+          <a href="login.html" class="text-link">Already applied? Log in</a>
+        </div>
+        <div id="successView" class="hidden">
+          <h1>Application submitted</h1>
+          <p class="subtitle">Thank you for applying. Your application is pending and an administrator will review it. You will receive an email with the decision.</p>
+          <a href="login.html" class="btn-primary">Back to login</a>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <script src="../../assets/js/pages/rider-application.js"></script>
+</body>
+</html>

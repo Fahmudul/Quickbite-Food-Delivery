@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrator Dashboard - Analytics | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/admin-analytics-dashboard.css">
+    <script src="../../assets/js/core/navigation.js" defer></script>
+    <script src="../../assets/js/pages/admin-analytics-dashboard.js" defer></script>
+</head>
+<body data-user-role="admin">
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="../admin/admin-dashboard.html">QuickBite</a>
+            <p class="sidebar-role">Administrator</p>
+            <nav class="sidebar-nav" aria-label="Administrator navigation" data-qb-nav="admin"></nav>
+            <a class="sidebar-logout" href="../auth/login.html">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <span class="optional-label">OPTIONAL P2</span>
+                <h1>Administrator dashboard — Analytics</h1>
+                <p class="page-subtitle">Overview of platform activity. The statistics show a simple summary of QuickBite operations.</p>
+            </header>
+
+            <section class="admin-stat-grid" aria-label="Platform statistics">
+                <article class="card stat-card stat-red">
+                    <p>Total orders</p>
+                    <strong id="totalOrders">0</strong>
+                    <span>All recorded orders</span>
+                </article>
+                <article class="card stat-card stat-green">
+                    <p>Completed</p>
+                    <strong id="completedOrders">0</strong>
+                    <span>Successfully delivered</span>
+                </article>
+                <article class="card stat-card stat-blue">
+                    <p>Delivery fees</p>
+                    <strong id="deliveryFees">৳0</strong>
+                    <span>Total platform delivery fees</span>
+                </article>
+                <article class="card stat-card stat-purple">
+                    <p>Restaurants</p>
+                    <strong id="restaurantCount">0</strong>
+                    <span>Registered restaurants</span>
+                </article>
+                <article class="card stat-card stat-red">
+                    <p>Riders</p>
+                    <strong id="riderCount">0</strong>
+                    <span>Registered riders</span>
+                </article>
+            </section>
+
+            <section class="admin-dashboard-lower">
+                <article class="card chart-card">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Orders by status</h2>
+                            <p>Current order status summary</p>
+                        </div>
+                    </div>
+                    <div class="status-chart" id="statusChart" aria-label="Orders by status chart"></div>
+                </article>
+
+                <article class="card snapshot-card">
+                    <div class="section-heading">
+                        <div>
+                            <h2>Operational snapshot</h2>
+                            <p>Items that may need administrator attention</p>
+                        </div>
+                    </div>
+                    <div class="snapshot-list" id="operationalSnapshot"></div>
+                </article>
+            </section>
+
+            <div class="dashboard-note">
+                <strong>Note</strong>
+                <span>Statistics are calculated from platform records. Access to this dashboard is limited to authorized administrators.</span>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

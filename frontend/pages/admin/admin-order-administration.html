@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Administration | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/admin-order-administration.css">
+    <script src="../../assets/js/core/navigation.js" defer></script>
+    <script src="../../assets/js/pages/admin-order-administration.js" defer></script>
+    <script src="../../assets/js/pages/admin-order-rider-controls.js" defer></script>
+</head>
+<body data-user-role="admin">
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="../admin/admin-dashboard.html">QuickBite</a>
+            <p class="sidebar-role">Administrator</p>
+            <nav class="sidebar-nav" aria-label="Administrator navigation" data-qb-nav="admin"></nav>
+            <a class="sidebar-logout" href="../auth/login.html">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Order administration</h1>
+                <p class="page-subtitle">Review order details, manage its rider assignment and cancel the order if needed.</p>
+            </header>
+
+            <div class="admin-order-grid">
+                <section class="card admin-order-card" aria-labelledby="adminOrderTitle">
+                    <div class="admin-order-heading">
+                        <div>
+                            <h2 id="adminOrderTitle">Order #QB-1048</h2>
+                            <span class="admin-status status-preparing" id="adminOrderStatus">Preparing</span>
+                        </div>
+                    </div>
+
+                    <div class="admin-order-details">
+                        <div class="admin-detail-row">
+                            <span>Customer</span>
+                            <strong>Rahim Ahmed</strong>
+                        </div>
+                        <div class="admin-detail-row">
+                            <span>Restaurant</span>
+                            <strong>Urban Bites</strong>
+                        </div>
+                        <div class="admin-detail-row">
+                            <span>Payment</span>
+                            <strong id="adminPaymentMethod">Prepaid</strong>
+                        </div>
+                        <div class="admin-detail-row">
+                            <span>Total</span>
+                            <strong>৳540</strong>
+                        </div>
+                        <div class="admin-detail-row admin-rider-row">
+                            <span>Assigned rider</span>
+                            <strong id="assignedRiderName">Kamal Hossain</strong>
+                        </div>
+                    </div>
+
+                    <div class="admin-items-box">
+                        <strong>Order items</strong>
+                        <p>Chicken Burger × 1, French Fries × 1, Soft Drink × 1</p>
+                    </div>
+
+                    <!-- Rider assignment: QB-DEV-030 (merged from ADMIN-09-orders-administration.html) -->
+                    <section class="rider-control-section" aria-labelledby="riderControlTitle">
+                        <h3 id="riderControlTitle">Rider assignment</h3>
+                        <p class="rider-control-description">Assign an available rider, change the current rider or remove the assignment before pickup.</p>
+                        <form id="adminRiderForm" novalidate>
+                            <label class="form-label" for="adminRiderSelect">Select rider</label>
+                            <select class="form-input" id="adminRiderSelect" name="riderId" required>
+                                <option value="">Choose an available rider</option>
+                            </select>
+                            <small class="admin-rider-error" id="adminRiderError" role="alert"></small>
+                            <div class="admin-rider-actions">
+                                <button class="btn btn-primary" type="submit" id="adminAssignButton">Reassign Rider</button>
+                                <button class="btn btn-secondary" type="button" id="adminUnassignButton">Unassign Rider</button>
+                            </div>
+                            <p class="admin-rider-feedback" id="adminRiderFeedback" role="status" aria-live="polite"></p>
+                        </form>
+                    </section>
+
+                    <!-- Cancellation: QB-DEV-027 -->
+                    <div class="admin-cancel-form">
+                        <label class="form-label" for="cancellationReason">Cancellation reason</label>
+                        <textarea class="form-input admin-reason-input" id="cancellationReason"
+                            rows="3" maxlength="300" placeholder="Enter the reason for cancelling this order"
+                            aria-describedby="reasonError" required></textarea>
+                        <small class="admin-error" id="reasonError" role="alert"></small>
+                        <div class="admin-actions">
+                            <button class="btn btn-secondary" type="button" id="cancelAdminOrderButton">
+                                Cancel Order
+                            </button>
+                        </div>
+                        <p class="admin-feedback" id="adminFeedback" role="status" aria-live="polite"></p>
+                    </div>
+                </section>
+
+                <aside class="card admin-cancellation-info">
+                    <section class="admin-info-section">
+                    <h2>Rider assignment rules</h2>
+                    <p>Riders can be assigned after an order is Accepted while the restaurant continues preparation.</p>
+                    <p>Only approved riders with Online and Available status can be selected.</p>
+                    <p>An order can have only one active rider, and a rider can have only one active delivery.</p>
+                    <p>Assignment, reassignment and unassignment are available only before pickup.</p>
+                    </section>
+
+                    <section class="admin-info-section">
+                    <h2>Administrative cancellation</h2>
+                    <p>Administrators can cancel an order while it is Accepted, Preparing or Ready for Pickup, before the rider picks it up.</p>
+                    <p>A cancellation reason is required and must be recorded with the order.</p>
+                    <p>Inventory is restored only when cancellation happens before preparation starts.</p>
+                    <p>Orders already Picked Up must use the failed-delivery flow.</p>
+                    <div class="admin-rule-note">
+                        <strong>Refund handling</strong>
+                        <span>Prepaid cancellations are referred for refund resolution. COD orders do not require a refund.</span>
+                    </div>
+                    </section>
+                </aside>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

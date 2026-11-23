@@ -1,0 +1,63 @@
+.home-page {
+    padding: 40px 0 56px;
+}
+
+.home-header {
+    margin-bottom: 28px;
+}
+
+.home-header h1 {
+    margin-bottom: 6px;
+    color: var(--primary);
+    font-size: 32px;
+}
+
+.home-header p {
+    max-width: 640px;
+    margin-bottom: 16px;
+}
+
+.home-header .btn {
+    margin-right: 8px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.home-role h2 {
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+.home-role ul {
+    list-style: none;
+}
+
+.home-role li {
+    padding: 6px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.home-role li:last-child {
+    border-bottom: 0;
+}
+
+.home-role li.is-missing {
+    color: var(--muted);
+    opacity: 0.6;
+}
+
+.home-role li.is-missing::after {
+    content: " — not built yet";
+    font-size: 12px;
+}
+
+.home-note {
+    margin-top: 12px;
+    font-size: 13px;
+}

@@ -1,0 +1,258 @@
+.optional-label {
+    display: inline-block;
+    margin-bottom: 9px;
+    padding: 3px 9px;
+    border-radius: 20px;
+    background: #f1eaff;
+    color: #8054c7;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: .4px;
+}
+
+.admin-stat-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 1100px;
+}
+
+.stat-card {
+    min-height: 112px;
+    padding: 15px 14px;
+}
+
+.stat-card p {
+    margin: 0 0 7px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.stat-card strong {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 25px;
+    font-weight: 600;
+    line-height: 1.1;
+}
+
+.stat-card span {
+    display: block;
+    color: var(--muted);
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.stat-red strong {
+    color: var(--primary);
+}
+
+.stat-green strong {
+    color: var(--success);
+}
+
+.stat-blue strong {
+    color: #3975d7;
+}
+
+.stat-purple strong {
+    color: #8054c7;
+}
+
+.admin-dashboard-lower {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(300px, .95fr);
+    gap: 16px;
+    max-width: 1100px;
+    margin-top: 18px;
+}
+
+.chart-card,
+.snapshot-card {
+    min-height: 225px;
+    padding: 17px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.section-heading p {
+    margin: 0;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+.status-chart {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    gap: 12px;
+    min-height: 145px;
+    padding: 12px 5px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.chart-column {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    min-width: 35px;
+    height: 140px;
+}
+
+.chart-value {
+    margin-bottom: 5px;
+    color: var(--text);
+    font-size: 10px;
+    font-weight: 600;
+}
+
+.chart-bar-area {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+.chart-bar {
+    width: min(42px, 70%);
+    min-height: 5px;
+    border-radius: 5px 5px 0 0;
+    background: var(--primary);
+}
+
+.chart-label {
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 9px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.snapshot-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+}
+
+.snapshot-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    min-height: 34px;
+    border-bottom: 1px solid #f0f1f3;
+    font-size: 11px;
+}
+
+.snapshot-row:last-child {
+    border-bottom: 0;
+}
+
+.snapshot-row span {
+    color: var(--text);
+}
+
+.snapshot-row strong {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.dashboard-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    max-width: 1100px;
+    margin-top: 16px;
+    padding: 14px 16px;
+    border-radius: 7px;
+    background: #f0eaff;
+    color: #7952b9;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.dashboard-note strong {
+    white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+    .admin-stat-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 850px) {
+    .admin-layout {
+        display: block;
+    }
+
+    .admin-layout .sidebar {
+        width: 100%;
+        min-height: auto;
+        padding: 18px 20px;
+    }
+
+    .admin-layout .sidebar-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .admin-layout .sidebar-logout {
+        margin-top: 10px;
+    }
+
+    .admin-layout .main-content {
+        padding: 28px 20px;
+    }
+
+    .admin-dashboard-lower {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 560px) {
+    .admin-stat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .stat-card {
+        min-height: 105px;
+    }
+
+    .stat-card strong {
+        font-size: 22px;
+    }
+
+    .chart-card,
+    .snapshot-card {
+        padding: 14px;
+    }
+
+    .status-chart {
+        gap: 5px;
+    }
+
+    .chart-label {
+        font-size: 8px;
+    }
+
+    .dashboard-note {
+        padding: 12px;
+    }
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rider Application Review | Administrator | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/pages/admin-rider-review.css">
+</head>
+<body>
+
+  <div class="layout">
+
+    <aside class="sidebar">
+      <div class="brand">QuickBite</div>
+      <p class="role-name">Administrator</p>
+      <nav class="sidebar-nav" id="sidebarNav" aria-label="Administrator navigation" data-qb-nav="admin"></nav>
+      <a class="sidebar-logout" href="../auth/login.html">Logout</a>
+    </aside>
+
+    <main class="main">
+      <div class="page-heading">
+        <h1>Rider application review</h1>
+        <p>Approve or reject a pending rider application.</p>
+      </div>
+
+      <div class="review-layout" id="reviewLayout">
+
+        <section class="card review-card">
+          <h2 id="riderName"></h2>
+          <span class="chip chip-yellow" id="statusChip">Pending</span>
+
+          <div class="field">
+            <label>Email</label>
+            <p class="field-value" id="riderEmail"></p>
+          </div>
+
+          <div class="field">
+            <label>Phone</label>
+            <p class="field-value" id="riderPhone"></p>
+          </div>
+
+          <div class="field">
+            <label>Vehicle type</label>
+            <p class="field-value" id="riderVehicle"></p>
+          </div>
+
+          <div class="field" id="reasonField">
+            <label for="rejectionReason">Rejection reason</label>
+            <textarea id="rejectionReason" rows="2" placeholder="Required when rejecting an application"></textarea>
+          </div>
+          <p class="error-text" id="reasonError"></p>
+
+          <div class="button-row">
+            <button type="button" class="btn-primary" id="approveBtn">Approve</button>
+            <button type="button" class="btn-secondary" id="rejectBtn">Reject</button>
+          </div>
+
+          <div class="message-box hidden" id="messageBox"></div>
+          <a href="../../pages/admin/admin-rider-applications.html" class="back-link hidden" id="backLink">Back to rider applications</a>
+        </section>
+
+        <aside class="card result-card">
+          <h3>Approval result</h3>
+          <p>Only approved riders can become Online and receive assignments.</p>
+          <p>Rejected riders cannot receive deliveries.</p>
+          <p>The applicant receives an approval/rejection email.</p>
+        </aside>
+
+      </div>
+
+      <p class="not-found hidden" id="notFound">This rider application could not be found.</p>
+    </main>
+
+  </div>
+
+  <script src="../../assets/js/core/navigation.js"></script>
+
+  <script src="../../assets/js/pages/admin-rider-review.js"></script>
+</body>
+</html>
