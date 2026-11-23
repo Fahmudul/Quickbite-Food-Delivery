@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Profile | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/pages/profile.css">
+</head>
+<body>
+
+  <header class="top-nav">
+    <div class="brand">QuickBite</div>
+    <nav class="nav-actions">
+      <a href="../../index.html" class="nav-link">Dashboard</a>
+      <a href="login.html" class="nav-link logout">Logout</a>
+    </nav>
+  </header>
+
+  <main class="profile-body">
+    <div class="profile-card">
+      <h1>Profile</h1>
+      <p class="subtitle">View and update your permitted account details.</p>
+
+      <div id="successMessage" class="success-box hidden"></div>
+
+      <div class="avatar-row">
+        <div class="avatar">
+          <img id="avatarImg" class="hidden" alt="Profile picture">
+          <span id="avatarInitials"></span>
+        </div>
+        <button type="button" id="uploadBtn" class="text-btn dark">Upload picture</button>
+      </div>
+      <input type="file" id="photoInput" accept=".jpg,.jpeg,.png" class="hidden">
+      <p id="photoError" class="error-text"></p>
+
+      <form id="profileForm" novalidate>
+
+        <div class="field" id="nameField">
+          <label for="fullName">Full name</label>
+          <input type="text" id="fullName" placeholder="Enter your full name">
+        </div>
+        <p class="error-text" id="nameError"></p>
+
+        <div class="field" id="emailField">
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="you@gmail.com">
+        </div>
+        <p class="error-text" id="emailError"></p>
+
+        <div class="field" id="phoneField">
+          <label for="phone">Phone</label>
+          <input type="text" id="phone" placeholder="01XXXXXXXXX">
+        </div>
+        <p class="error-text" id="phoneError"></p>
+
+        <button type="submit" class="btn-primary">Save changes</button>
+      </form>
+
+      <a href="forgot-password.html" class="btn-secondary">Change password</a>
+
+      <button type="button" id="removePhotoBtn" class="text-btn red">Remove profile picture</button>
+    </div>
+  </main>
+
+  <script src="../../assets/js/pages/profile.js"></script>
+</body>
+</html>

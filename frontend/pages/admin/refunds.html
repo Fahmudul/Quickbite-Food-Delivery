@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Refund Handling | QuickBite</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/pages/admin-refunds.css">
+</head>
+<body class="admin-layout">
+  <aside class="sidebar admin-sidebar">
+    <a class="sidebar-brand" href="./dashboard.html">QuickBite</a><p class="sidebar-role">Administrator</p>
+    <nav class="sidebar-nav" aria-label="Administrator navigation">
+      <a class="sidebar-link" href="./dashboard.html">Dashboard</a><a class="sidebar-link" href="./restaurant-applications.html">Restaurant Applications</a><a class="sidebar-link" href="./rider-applications.html">Rider Applications</a><a class="sidebar-link" href="./delivery-zones.html">Delivery Zones</a><a class="sidebar-link" href="./delivery-fee.html">Delivery Fee</a><a class="sidebar-link" href="./orders.html">Orders &amp; Riders</a><a class="sidebar-link" href="./delivery-problems.html">Delivery Problems</a><a class="sidebar-link active" href="./refunds.html" aria-current="page">Refunds</a><a class="sidebar-link" href="./profile.html">Account Profile</a>
+    </nav><a class="sidebar-logout" href="../auth/login.html">Logout</a>
+  </aside>
+  <main class="main-content">
+    <header class="page-header"><h1>Refund handling</h1><p>Manage prepaid-order refund responsibility according to the final sandbox payment approach.</p></header>
+    <div class="content-area">
+      <section class="refund-list" aria-label="Refund cases">
+        <article class="refund-row"><strong>#QB-1009</strong><span>Admin cancellation</span><span>৳ 620</span><span class="status status-pending">Pending</span><a href="./refund-review.html?order=QB-1009">Review</a></article>
+        <article class="refund-row"><strong>#QB-1002</strong><span>Failed delivery</span><span>৳ 480</span><span class="status status-refunded">Refunded</span><a href="./refund-review.html?order=QB-1002&amp;status=refunded">View</a></article>
+      </section>
+      <aside class="implementation-note"><strong>Refund implementation remains gateway-dependent.</strong><p>If the sandbox supports reliable refund APIs, QuickBite can process and track them. Otherwise, use the approved admin-managed/simulated fallback and label it clearly.</p><b>Never show “Refunded” unless the selected workflow confirms it.</b></aside>
+    </div>
+  </main>
+</body>
+</html>

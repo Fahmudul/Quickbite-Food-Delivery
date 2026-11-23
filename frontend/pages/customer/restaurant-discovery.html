@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Restaurants</title>
+  <link rel="stylesheet" href="../../assets/css/base.css">
+  <link rel="stylesheet" href="../../assets/css/layout.css">
+  <link rel="stylesheet" href="../../assets/css/pages/restaurant-discovery.css">
+</head>
+<body>
+
+  <header class="customer-header">
+    <div class="customer-header-inner">
+      <a class="customer-brand" href="../customer/restaurant-discovery.html">QuickBite</a>
+      <nav class="customer-nav" aria-label="Customer navigation" data-qb-nav="customer"></nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+
+    <h1 class="page-title">Restaurants serving your area</h1>
+    <form class="filter-bar" action="#" method="get">
+      <label for="deliveryArea">Delivery zone</label>
+      <select id="deliveryArea" name="deliveryArea">
+        <option value="dhanmondi" selected>Dhanmondi</option>
+        <option value="uttara">Uttara</option>
+        <option value="banani">Banani</option>
+      </select>
+    </form>
+
+    <div class="restaurant-grid" id="restaurantGrid">
+
+      <a href="../../pages/customer/restaurant-menu.html" class="restaurant-card" data-zone="dhanmondi">
+        <div class="restaurant-image">Restaurant image</div>
+        <div class="restaurant-info">
+          <h2 class="restaurant-name">Burger House</h2>
+          <p class="restaurant-meta">Burgers &bull; 20-30 min</p>
+          <span class="status-badge">Accepting Orders</span>
+        </div>
+      </a>
+
+      <article class="restaurant-card" data-zone="dhanmondi">
+        <div class="restaurant-image">Restaurant image</div>
+        <div class="restaurant-info">
+          <h2 class="restaurant-name">Spice Kitchen</h2>
+          <p class="restaurant-meta">Indian &bull; 25-35 min</p>
+          <span class="status-badge">Accepting Orders</span>
+        </div>
+      </article>
+
+      <article class="restaurant-card is-closed" data-zone="dhanmondi">
+        <div class="restaurant-image">Restaurant image</div>
+        <div class="restaurant-info">
+          <h2 class="restaurant-name">Pizza Corner</h2>
+          <p class="restaurant-meta">Pizza &bull; 15-25 min</p>
+          <span class="status-badge status-badge-closed">Closed</span>
+        </div>
+      </article>
+
+    </div>
+
+    <p class="no-results-message hidden" id="noResultsMessage">No restaurants are currently serving this delivery zone.</p>
+  </main>
+
+  <script src="../../assets/js/core/navigation.js"></script>
+
+  <script src="../../assets/js/pages/restaurant-discovery.js"></script>
+
+</body>
+</html>

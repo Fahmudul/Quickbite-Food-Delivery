@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/checkout.css">
+    <script src="../../assets/js/core/navigation.js" defer></script>
+    <script src="../../assets/js/features/cart/reservation-timer.js" defer></script>
+    <script src="../../assets/js/features/orders/order-store.js" defer></script>
+    <script src="../../assets/js/pages/checkout.js" defer></script>
+</head>
+<body>
+    <div class="customer-layout">
+        <header class="customer-header">
+            <div class="customer-header-inner">
+                <a class="customer-brand" href="../customer/restaurant-discovery.html">QuickBite</a>
+                <nav class="customer-nav" aria-label="Customer navigation" data-qb-nav="customer"></nav>
+            </div>
+        </header>
+        <main class="customer-main checkout-main">
+            <h1>Checkout</h1>
+            <div class="checkout-grid">
+                <div class="checkout-left">
+                    <section class="card checkout-card" aria-labelledby="addressHeading">
+                        <h2 id="addressHeading">Delivery address</h2>
+                        <div class="address-row">
+                            <label class="address-choice" for="deliveryAddress">
+                                <input id="deliveryAddress" type="radio" name="address" value="address-1" checked>
+                                <span><strong>Home</strong><small>House 12, Road 5, Dhanmondi, Dhaka</small><small>Delivery zone: Dhanmondi</small></span>
+                            </label>
+                        </div>
+                        <a class="change-address" id="changeAddress" href="#">Change address</a>
+                        <div class="address-options" id="addressOptions" hidden>
+                            <label class="address-choice" for="officeAddress">
+                                <input id="officeAddress" type="radio" name="address" value="address-2">
+                                <span><strong>Office</strong><small>Road 11, Banani, Dhaka</small><small>Delivery zone: Banani (not served by this restaurant)</small></span>
+                            </label>
+                        </div>
+                        <p class="field-error" id="addressError" role="alert"></p>
+                    </section>
+
+                    <section class="card checkout-card" aria-labelledby="paymentHeading">
+                        <h2 id="paymentHeading">Payment method</h2>
+                        <label class="payment-option" for="codPayment">
+                            <input id="codPayment" type="radio" name="payment" value="cod" checked>
+                            <span><strong>Cash on Delivery</strong><small>Pay the rider when your order arrives.</small></span>
+                        </label>
+                        <label class="payment-option" for="onlinePayment">
+                            <input id="onlinePayment" type="radio" name="payment" value="online">
+                            <span><strong>Online Payment — Sandbox</strong><small>Complete payment through the test gateway after validation.</small></span>
+                        </label>
+                        <p class="field-error" id="paymentError" role="alert"></p>
+                    </section>
+                </div>
+
+                <aside class="card order-summary" aria-labelledby="summaryHeading">
+                    <h2 id="summaryHeading">Order summary</h2>
+                    <div id="summaryItems"></div>
+                    <div class="summary-row"><span>Subtotal</span><span id="subtotal">৳ 480</span></div>
+                    <div class="summary-row"><span>Delivery fee</span><span id="deliveryFee">৳ 60</span></div>
+                    <div class="summary-row total-row"><strong>Total</strong><strong id="orderTotal">৳ 540</strong></div>
+                    <p class="reservation-text" id="reservationStatus" role="status"></p>
+                    <p class="field-error" id="checkoutError" role="alert"></p>
+                    <button class="btn btn-primary place-order" id="placeOrderButton" type="button">Place order</button>
+                    <p class="checkout-feedback" id="checkoutFeedback" role="status" aria-live="polite"></p>
+                </aside>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery Fee | QuickBite</title>
+    <link rel="stylesheet" href="../../assets/css/base.css">
+    <link rel="stylesheet" href="../../assets/css/layout.css">
+    <link rel="stylesheet" href="../../assets/css/pages/admin-delivery-fee.css">
+    <script src="../../assets/js/core/navigation.js" defer></script>
+    <script src="../../assets/js/pages/admin-delivery-fee.js" defer></script>
+</head>
+<body data-user-role="admin">
+    <div class="admin-layout">
+        <aside class="sidebar">
+            <a class="sidebar-brand" href="../admin/admin-dashboard.html">QuickBite</a>
+            <p class="sidebar-role">Administrator</p>
+            <nav class="sidebar-nav" aria-label="Administrator navigation" data-qb-nav="admin"></nav>
+            <a class="sidebar-logout" href="../auth/login.html">Logout</a>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <h1>Delivery Fee</h1>
+                <p class="page-subtitle">Manage the platform-wide delivery fee for new orders.</p>
+            </header>
+
+            <section class="card fee-card" aria-labelledby="feeHeading">
+                <h2 id="feeHeading">Current delivery fee</h2>
+                <p class="fee-amount" id="currentFee">৳ 60</p>
+
+                <form id="feeForm" novalidate>
+                    <label class="form-label" for="newFee">New delivery fee (BDT)</label>
+                    <input class="form-input" id="newFee" name="newFee" type="text"
+                        inputmode="decimal" maxlength="10" autocomplete="off"
+                        placeholder="Enter new delivery fee" aria-describedby="feeError">
+                    <small class="fee-error" id="feeError" role="alert"></small>
+                    <button class="btn btn-primary fee-update-button" id="updateFeeButton" type="submit">
+                        Update delivery fee
+                    </button>
+                    <p class="fee-message" id="feeMessage" role="status" aria-live="polite"></p>
+                </form>
+
+                <p class="fee-note">The updated fee applies to new checkouts. Existing orders keep their original delivery fee.</p>
+            </section>
+            <p class="fee-access-message" id="accessMessage" role="alert" hidden>
+                Only administrators can update the delivery fee.
+            </p>
+        </main>
+    </div>
+</body>
+</html>

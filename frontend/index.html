@@ -5,15 +5,101 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuickBite</title>
   <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/layout.css">
+  <link rel="stylesheet" href="./assets/css/pages/home.css">
 </head>
 <body>
-  <main class="container">
-    <h1>QuickBite</h1>
-    <p>Frontend boilerplate is running.</p>
-    <section class="health-card">
-      <h2>Local API Status</h2>
-      <p id="api-status">Checking...</p>
-    </section>
+  <main class="container home-page">
+    <header class="home-header">
+      <h1>QuickBite</h1>
+      <p class="text-muted">Online food ordering &amp; delivery platform — frontend screens by role.
+        Pages use sample data saved in this browser until the PHP API is connected.</p>
+      <a class="btn btn-primary" href="./pages/auth/login.html">Log in</a>
+      <a class="btn btn-secondary" href="./pages/customer/restaurant-discovery.html">Browse restaurants</a>
+    </header>
+
+    <div class="home-grid">
+      <section class="card home-role">
+        <h2>Accounts</h2>
+        <ul>
+          <li><a href="./pages/auth/login.html">AUTH-01 Login</a></li>
+          <li><a href="./pages/auth/customer-registration.html">AUTH-02 Customer Registration</a></li>
+          <li class="is-missing">AUTH-03 Restaurant Manager Application</li>
+          <li><a href="./pages/auth/rider-application.html">AUTH-04 Rider Application</a></li>
+          <li><a href="./pages/auth/forgot-password.html">AUTH-05 Forgot Password</a></li>
+          <li><a href="./pages/auth/reset-password.html">AUTH-06 Reset Password</a></li>
+          <li><a href="./pages/auth/profile.html">AUTH-07 Profile Management</a></li>
+        </ul>
+      </section>
+
+      <section class="card home-role">
+        <h2>Customer</h2>
+        <ul>
+          <li><a href="./pages/customer/restaurant-discovery.html">CUST-01 Restaurant Discovery</a></li>
+          <li><a href="./pages/customer/restaurant-menu.html">CUST-02 Restaurant Menu</a></li>
+          <li><a href="./pages/customer/active-cart.html">CUST-03 Active Cart</a></li>
+          <li class="is-missing">CUST-04 Expired Cart — Reserve Again</li>
+          <li><a href="./pages/customer/saved-addresses.html">CUST-05 Saved Addresses</a></li>
+          <li><a href="./pages/customer/checkout.html">CUST-06 Checkout</a></li>
+          <li><a href="./pages/customer/payment-retry.html">CUST-07 Payment Failed — Retry</a></li>
+          <li><a href="./pages/customer/order-confirmation.html">CUST-08 Order Confirmation</a></li>
+          <li><a href="./pages/customer/current-order-tracking.html">CUST-09 Current Order Tracking</a></li>
+          <li><a href="./pages/customer/order-history.html">CUST-10 Order History</a></li>
+          <li class="is-missing">P2-CUST-01 Rating &amp; Review (optional)</li>
+        </ul>
+      </section>
+
+      <section class="card home-role">
+        <h2>Restaurant Manager</h2>
+        <ul>
+          <li><a href="./pages/restaurant/manager-dashboard.html">RM-01 Dashboard</a></li>
+          <li class="is-missing">RM-02 Restaurant Profile &amp; Coverage</li>
+          <li class="is-missing">RM-03 Menu Management</li>
+          <li class="is-missing">RM-04 Add or Edit Menu Item</li>
+          <li class="is-missing">RM-05 Inventory Management</li>
+          <li class="is-missing">RM-06 Operating Status</li>
+          <li class="is-missing">RM-07 Current Orders</li>
+          <li class="is-missing">RM-08 Order Details &amp; Preparation</li>
+          <li><a href="./pages/restaurant/manager-analytics-dashboard.html">P2-RM-01 Analytics Dashboard (optional)</a></li>
+        </ul>
+      </section>
+
+      <section class="card home-role">
+        <h2>Delivery Rider</h2>
+        <ul>
+          <li><a href="./pages/rider/rider-dashboard.html">RIDER-01 Dashboard &amp; Availability (+ P2 statistics)</a></li>
+          <li><a href="./pages/rider/rider-current-delivery.html">RIDER-02 Assigned Delivery</a></li>
+          <li><a href="./pages/rider/rider-active-delivery.html">RIDER-03 Active Delivery</a></li>
+          <li><a href="./pages/rider/rider-report-delivery-problem.html">RIDER-04 Report Delivery Problem</a></li>
+          <li class="is-missing">RIDER-05 Delivery History</li>
+        </ul>
+      </section>
+
+      <section class="card home-role">
+        <h2>Administrator</h2>
+        <ul>
+          <li><a href="./pages/admin/admin-dashboard.html">ADMIN-01 Dashboard</a></li>
+          <li class="is-missing">ADMIN-02 Restaurant Applications</li>
+          <li class="is-missing">ADMIN-03 Restaurant Application Review</li>
+          <li><a href="./pages/admin/admin-rider-applications.html">ADMIN-04 Rider Applications</a></li>
+          <li><a href="./pages/admin/admin-rider-review.html">ADMIN-05 Rider Application Review</a></li>
+          <li><a href="./pages/admin/admin-delivery-zones.html">ADMIN-06 Delivery Zone Management</a></li>
+          <li><a href="./pages/admin/admin-delivery-fee.html">ADMIN-07 Delivery Fee Settings</a></li>
+          <li><a href="./pages/admin/admin-orders-rider-assignment.html">ADMIN-08 Orders &amp; Rider Assignment</a></li>
+          <li><a href="./pages/admin/admin-order-administration.html">ADMIN-09 Order Administration</a></li>
+          <li><a href="./pages/admin/admin-delivery-problem-resolution.html">ADMIN-10 Delivery Problem Resolution</a></li>
+          <li><a href="./pages/admin/admin-refunds.html">ADMIN-11 Refund Handling</a></li>
+          <li><a href="./pages/admin/admin-refund-review.html">ADMIN-12 Refund Review</a></li>
+          <li><a href="./pages/admin/admin-analytics-dashboard.html">P2-ADMIN-01 Analytics Dashboard (optional)</a></li>
+        </ul>
+      </section>
+
+      <section class="card home-role">
+        <h2>Local API Status</h2>
+        <p id="api-status">Checking...</p>
+        <p class="text-muted home-note">Screens in grey are in the Figma design but not built yet.</p>
+      </section>
+    </div>
   </main>
   <script type="module" src="./assets/js/pages/home.js"></script>
 </body>
