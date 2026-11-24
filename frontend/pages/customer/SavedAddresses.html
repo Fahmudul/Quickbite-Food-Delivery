@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuickBite | Saved Addresses</title>
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\base.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\layout.css">
+  <link rel="stylesheet" href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\css\pages\SavedAddresses.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\RestaurantDiscovery.html" class="navbar-logo">QuickBite</a>
+
+      <ul class="navbar-links">
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\RestaurantDiscovery.html" class="nav-link">Restaurants</a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\ActiveCart.html" class="nav-link">Cart<span class="cart-count" id="cartCount"></span></a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\OrderHistory.html" class="nav-link">Orders</a></li>
+        <li><a href="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\pages\customer\SavedAddresses.html" class="nav-link active">Addresses</a></li>
+        <li><a href="#" class="nav-link">Profile</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main class="page-content">
+    <div class="addresses-layout">
+
+      <section class="address-list-section">
+        <h1 class="page-title">Saved delivery addresses</h1>
+
+        <div class="address-list" id="addressList">
+
+          <div class="address-card" data-default="true">
+            <h2 class="address-label">Home</h2>
+            <p class="address-text">House 12, Road 5, Dhanmondi, Dhaka</p>
+            <p class="address-default">Default address</p>
+            <div class="address-actions">
+              <a href="#" class="edit-link">Edit</a>
+              <a href="#" class="delete-link">Delete</a>
+            </div>
+          </div>
+
+          <div class="address-card" data-default="false">
+            <h2 class="address-label">University</h2>
+            <p class="address-text">AIUB, Kuratoli, Dhaka</p>
+            <a href="#" class="address-set-default">Set as default</a>
+            <div class="address-actions">
+              <a href="#" class="edit-link">Edit</a>
+              <a href="#" class="delete-link">Delete</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="login-card add-address-card">
+        <h2 class="card-title" id="addAddressTitle">Add address</h2>
+
+        <p class="form-error-message" id="addressFormError"></p>
+
+        <form id="addAddressForm" action="#" method="post" novalidate>
+
+          <div class="form-group">
+            <label for="addressLabel">Address label</label>
+            <input type="text" id="addressLabel" name="addressLabel" placeholder="e.g. Home" required>
+            <span class="field-error" id="addressLabelError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="fullAddress">Full address</label>
+            <input type="text" id="fullAddress" name="fullAddress" placeholder="Enter the delivery address" required>
+            <span class="field-error" id="fullAddressError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="deliveryNote">Delivery note</label>
+            <input type="text" id="deliveryNote" name="deliveryNote" placeholder="e.g. Call on arrival">
+          </div>
+
+          <button type="submit" class="btn-login" id="saveAddressBtn">Save Address</button>
+
+        </form>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="C:\xampp\htdocs\Quickbite-Food-Delivery\frontend\assets\js\pages\SavedAddresses.js"></script>
+
+</body>
+</html>
